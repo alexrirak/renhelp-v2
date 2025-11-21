@@ -1,0 +1,20 @@
+services:
+  php-apache-environment:
+    container_name: php-apache
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./grav:/var/www/html
+    ports:
+      - 80:80
+    networks:
+      - internal
+    command: >
+      bash -c "chown -R www-data:www-data /var/www/html &&
+                     chmod -R 755 /var/www/html &&
+                     chmod -R 775 /var/www/html/cache /var/www/html/logs /var/www/html/tmp /var/www/html/images /var/www/html/assets &&
+                     apache2-foreground"
+networks:
+  internal:
+    driver: bridge

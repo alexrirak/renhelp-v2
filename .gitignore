@@ -1,0 +1,4 @@
+grav/vendor
+.env
+.env.prod
+/.idea
