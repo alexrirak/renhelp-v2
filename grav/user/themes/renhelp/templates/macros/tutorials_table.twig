@@ -1,0 +1,5 @@
+{% macro table(items) %}
+<table>
+{% for i in items %}<tr><td>{{ i.title }}</td></tr>{% endfor %}
+</table>
+{% endmacro %}

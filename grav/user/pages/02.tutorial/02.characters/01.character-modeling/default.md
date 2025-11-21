@@ -1,15 +1,13 @@
 ---
 title: Character Modeling
-skill_level: 5
+summary: Ever wondered how to make your own building? Here you will find help.
+type: [RenX, LevelEdit]
 author: PsycoArmy
+skill: 5
 software:
   - RenX
   - Gmax
 views: 907
-body_classes: title-center title-h1h2
-taxonomy:
-    category: tutorials
-    tag: [characters, modeling, advanced]
 ---
 
 # Character Modeling Tutorial
