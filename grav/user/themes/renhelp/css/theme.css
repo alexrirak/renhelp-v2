@@ -1,1 +1,86 @@
-body { font-family: sans-serif; margin:0; padding:0; }
+/* renhelp theme base */
+/* Basic reset */
+* { box-sizing: border-box; }
+html,body { margin:0; padding:0; font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; background:#eaf4ff; color:#1b2430; }
+
+/* page center container */
+.ren-container {
+    max-width: 1100px;
+    margin: 18px auto;
+    padding: 12px;
+}
+
+/* header */
+.ren-header {
+    background: #d8ecff;
+    border: 1px solid #95bfe5;
+    padding: 12px 16px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border-radius:4px;
+}
+.ren-logo { display:flex; align-items:center; gap:12px; }
+.ren-logo img { height:54px; max-height:54px; }
+
+/* navbar */
+.ren-nav {
+    margin-top:8px;
+    background:#5b86c5;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:4px;
+}
+.ren-nav a { color:#fff; text-decoration:none; margin-right:12px; font-size:14px; }
+.ren-nav a:hover { text-decoration:underline; }
+
+/* section header */
+.ren-section {
+    margin-top:16px;
+    border:1px solid #95bfe5;
+    background:#f3fbff;
+    padding:8px;
+    border-radius:4px;
+}
+
+/* tutorial table */
+.tutorials-table {
+    width:100%;
+    border-collapse:collapse;
+    margin-top:8px;
+    background:#f7fbff;
+    border:1px solid #8fb7e9;
+}
+.tutorials-table thead th {
+    background:#c7def8;
+    padding:8px 10px;
+    text-align:left;
+    border-bottom:1px solid #7aa6da;
+    font-weight:600;
+    font-size:13px;
+}
+.tutorials-table tbody td {
+    padding:8px 10px;
+    border-bottom:1px solid rgba(122,166,218,0.2);
+    font-size:13px;
+}
+.tutorials-table tbody tr:hover {
+    background: rgba(0,0,0,0.02);
+}
+
+/* small icons */
+.icon-inline { vertical-align: middle; height:18px; margin-right:6px; }
+
+/* responsive */
+@media (max-width:900px) {
+    .ren-container { padding:8px; }
+    .ren-logo img { height:44px; }
+    .tutorials-table thead { display:none; }
+    .tutorials-table tbody td { display:block; width:100%; }
+    .tutorials-table tbody td:before {
+        content: attr(data-label);
+        display:block;
+        font-weight:600;
+        margin-bottom:4px;
+    }
+}

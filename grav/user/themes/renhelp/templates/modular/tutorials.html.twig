@@ -1,22 +1,44 @@
-{% extends 'base.html.twig' %}
-{% block content %}
-    <h1>{{ page.title }}</h1>
+{#{% extends 'base.html.twig' %}#}
+{#{% block content %}#}
+{#    <h1>{{ page.title }}</h1>#}
 
-    <div class="tutorial-list">
-        {% for module in page.collection() %}
-            <div class="tutorial-item">
-                <h2>{{ module.title }}</h2>
+{#    <div class="tutorial-list">#}
+{#        {% for module in page.collection() %}#}
+{#            <div class="tutorial-item">#}
+{#                <h2>{{ module.title }}</h2>#}
 
-                {% if module.header.summary %}
-                    <p>{{ module.header.summary }}</p>
-                {% endif %}
+{#                {% if module.header.summary %}#}
+{#                    <p>{{ module.header.summary }}</p>#}
+{#                {% endif %}#}
 
-                <p>
-                    <strong>Author:</strong> {{ module.header.author }}<br>
-                    <strong>Skill:</strong> {{ module.header.skill }}<br>
-                    <strong>Views:</strong> {{ module.header.views }}
-                </p>
-            </div>
-        {% endfor %}
-    </div>
-{% endblock %}
+{#                <p>#}
+{#                    <strong>Author:</strong> {{ module.header.author }}<br>#}
+{#                    <strong>Skill:</strong> {{ module.header.skill }}<br>#}
+{#                    <strong>Views:</strong> {{ module.header.views }}#}
+{#                </p>#}
+{#            </div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#{% endblock %}#}
+
+<div class="ren-section">
+    <h2>
+        {% if module.header.icon %}
+            <img src="{{ module.url(module.header.icon) }}" alt="" class="icon-inline" />
+        {% endif %}
+        {{ module.title }}
+    </h2>
+
+    {# Build a collection of child pages (tutorials) using taxonomy or folder children #}
+{#    {% set tutorials = page.find('/' ~ page.route ~ '/')->children.visible ?? page.collection('content',{'items':page.children}) %}#}
+    {# Simpler: show children of this module if any, otherwise show collection by taxonomy #}
+    {% if page.children.count > 0 %}
+        {% set rows = page.children.visible %}
+    {% else %}
+        {% set rows = site.find('tutorials') ? site.find('tutorials').children.visible : [] %}
+    {% endif %}
+
+    {% from 'macros/tutorials_table.twig' import tutorials_table %}
+    {{ tutorials_table(rows) }}
+</div>
+

@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ grav.language.getActive ?: 'en' }}">
 <head>
-<title>{{ page.title }}</title>
-<link rel='stylesheet' href='{{ theme_url }}/css/theme.css'>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.header.title %}{{ page.header.title }} - {% endif %}{{ site.title }}</title>
+    {% do assets.addCss('theme://css/theme.css') %}
+    {{ assets.css() }}
+    {{ assets.js() }}
 </head>
+{#<title>{{ page.title }}</title>#}
+{#<link rel='stylesheet' href='{{ theme_url }}/css/theme.css'>#}
 <body>
-{% include 'partials/header.html.twig' %}
-<div class='content'>
-{% block content %}{% endblock %}
+<div class="ren-container">
+    {% include 'partials/header.html.twig' %}
+    {% include 'partials/navigation.html.twig' %}
+    {% if theme_config.settings.show_breadcrumbs %}
+        {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+
+    <main id="content">
+        {{ page.content }}
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'partials/footer.html.twig' %}
 </div>
-{% include 'partials/footer.html.twig' %}
 </body>
 </html>

@@ -1,1 +1,4 @@
 enabled: true
+settings:
+  container_width: 1100
+  show_breadcrumbs: true

@@ -1,4 +1,19 @@
 {% extends 'base.html.twig' %}
+
 {% block content %}
-{{ page.content|raw }}
+    <article class="page">
+        <h1>{{ page.title }}</h1>
+
+        {# Render page content (markdown) #}
+        <div class="page-content">
+            {{ page.content }}
+        </div>
+
+        {# If this page has a modular section named tutorials, render it #}
+        {% for module in page.collection %}
+            {% if module.template == 'modular/tutorials' or module.template == 'tutorials' %}
+                {% include 'modular/tutorials.html.twig' with {module: module} %}
+            {% endif %}
+        {% endfor %}
+    </article>
 {% endblock %}

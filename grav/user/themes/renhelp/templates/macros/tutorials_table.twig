@@ -1,5 +1,61 @@
-{% macro table(items) %}
-<table>
-{% for i in items %}<tr><td>{{ i.title }}</td></tr>{% endfor %}
-</table>
+{% macro tutorials_table(rows) %}
+    {% import _self as self %}
+    <table class="tutorials-table" role="table">
+        <thead>
+        <tr>
+            <th>Tutorial</th>
+            <th style="width:120px">Skill</th>
+            <th style="width:160px">Author</th>
+            <th style="width:140px">Type</th>
+            <th style="width:70px;text-align:right">Views</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for r in rows %}
+            <tr>
+                <td data-label="Tutorial">
+                    <a href="{{ r.url }}">{{ r.title }}</a>
+                    {% if r.header.summary %}
+                        <div style="font-size:12px; color:#586978;">{{ r.header.summary }}</div>
+                    {% endif %}
+                </td>
+
+                <td data-label="Skill">
+                    {% set skill = r.header.skill ?: 0 %}
+                    <div style="white-space:nowrap;">
+                        {% for i in 1..5 %}
+                            {% if i <= skill %}
+                                <span title="star">★</span>
+                            {% else %}
+                                <span style="opacity:0.25">★</span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </td>
+
+                <td data-label="Author">
+                    {% if r.header.author %}
+                        {{ r.header.author }}
+                    {% else %}
+                        {{ r.header.taxonomy.author ?: '—' }}
+                    {% endif %}
+                </td>
+
+                <td data-label="Type">
+                    {% if r.taxonomy and r.taxonomy.type %}
+                        {% for t in r.taxonomy.type %}
+                            <span style="display:inline-block; padding:2px 6px; background:#d3e8ff; border-radius:12px; margin-right:6px; font-size:12px;">{{ t }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </td>
+
+                <td data-label="Views" style="text-align:right">
+                    {{ r.header.views ?: '—' }}
+                </td>
+            </tr>
+        {% else %}
+            <tr><td colspan="5">No tutorials found.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endmacro %}

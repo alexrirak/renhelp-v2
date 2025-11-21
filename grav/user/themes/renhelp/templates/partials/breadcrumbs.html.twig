@@ -1,1 +1,11 @@
-<div class='breadcrumbs'></div>
+{% if not page.home %}
+    <div style="margin-top:8px; font-size:12px; color:#345;">
+        {% for crumb in breadcrumbs %}
+            {% if not loop.last %}
+                <a href="{{ crumb.url }}">{{ crumb.title }}</a> &raquo;
+            {% else %}
+                <span>{{ crumb.title }}</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}
