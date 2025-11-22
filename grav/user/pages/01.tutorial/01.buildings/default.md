@@ -1,6 +1,6 @@
 ---
 title: Buildings
-template: modular/tutorials
+is_section_header: 'true'
 icon: 'images/building.gif'
 content:
   items: '@self.children'

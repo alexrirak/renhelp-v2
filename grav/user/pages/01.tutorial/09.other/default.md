@@ -1,9 +1,8 @@
 ---
-title: Maps
+title: Other
 is_section_header: 'true'
 content:
   items: '@self.children'
 ---
 
-Topics related to mapping are sorted under this section.
-
+All other topics that don't fit in another category.

@@ -1,9 +1,8 @@
 ---
-title: Maps
+title: Mods
 is_section_header: 'true'
 content:
   items: '@self.children'
 ---
 
-Topics related to mapping are sorted under this section.
-
+Topics about things that are needed for your own mod.

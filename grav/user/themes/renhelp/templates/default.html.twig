@@ -14,6 +14,9 @@
             {% if module.template == 'modular/tutorials' or module.template == 'tutorials' %}
                 {% include 'modular/tutorials.html.twig' with {module: module} %}
             {% endif %}
+            {% if module.header.is_section_header %}
+                {% include 'modular/tutorials.html.twig' with {module: module} %}
+            {% endif %}
         {% endfor %}
     </article>
 {% endblock %}

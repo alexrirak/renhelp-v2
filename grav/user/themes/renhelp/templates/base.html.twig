@@ -11,7 +11,7 @@
 <body>
 <div class="ren-container">
     {% include 'partials/header.html.twig' %}
-    {% if theme_config.settings.show_breadcrumbs %}
+    {% if grav.theme.config.settings.show_breadcrumbs %}
         {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
 

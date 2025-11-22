@@ -1,10 +1,10 @@
 ---
 title: Characters
-template: modular/tutorials
+is_section_header: 'true'
 content:
   items: '@self.children'
 ---
 
-This section contains character tutorials (module).
+Make your own character with the help of these tutorials.
 
 
