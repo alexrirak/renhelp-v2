@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% if page.header.title %}{{ page.header.title }} - {% endif %}{{ site.title }}</title>
     {% do assets.addCss('theme://css/theme.css') %}
-    {{ assets.css() }}
-    {{ assets.js() }}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
 </head>
 {#<title>{{ page.title }}</title>#}
 {#<link rel='stylesheet' href='{{ theme_url }}/css/theme.css'>#}

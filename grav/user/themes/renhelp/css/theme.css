@@ -1,72 +1,147 @@
 /* renhelp theme base */
 /* Basic reset */
 * { box-sizing: border-box; }
-html,body { margin:0; padding:0; font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; background:#eaf4ff; color:#1b2430; }
+body {
+    background-color: #cfe3ff; /* light blue background from screenshot */
+    color: #1b2430; /* a dark but soft text color */
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
 
-/* page center container */
 .ren-container {
-    max-width: 1100px;
-    margin: 18px auto;
-    padding: 12px;
+    max-width: 1100px; /* or whatever width matches screenshot */
+    margin: 0 auto;
+    padding: 16px;
+    background: white;
+    border: 1px solid #95bfe5; /* subtle border to set container apart */
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 /* header */
 .ren-header {
-    background: #d8ecff;
-    border: 1px solid #95bfe5;
+    background-color: #8fb7e9; /* darker header blue */
     padding: 12px 16px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    border-radius:4px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #7aa6da;
 }
-.ren-logo { display:flex; align-items:center; gap:12px; }
-.ren-logo img { height:54px; max-height:54px; }
 
-/* navbar */
-.ren-nav {
-    margin-top:8px;
-    background:#5b86c5;
-    color:#fff;
-    padding:6px 12px;
-    border-radius:4px;
+.ren-logo img {
+    height: 48px;
+    margin-right: 12px;
 }
-.ren-nav a { color:#fff; text-decoration:none; margin-right:12px; font-size:14px; }
-.ren-nav a:hover { text-decoration:underline; }
+
+/* navigation */
+.ren-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.ren-nav li {
+    margin-right: 16px;
+}
+
+.ren-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.ren-nav a:hover {
+    text-decoration: underline;
+}
+
 
 /* section header */
-.ren-section {
-    margin-top:16px;
-    border:1px solid #95bfe5;
-    background:#f3fbff;
-    padding:8px;
-    border-radius:4px;
+.ren-section-title {
+    background-color: #c7def8;
+    padding: 8px 10px;
+    border: 1px solid #7aa6da;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.ren-section-title h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #1b2430;
+}
+
+.section-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }
 
 /* tutorial table */
 .tutorials-table {
-    width:100%;
-    border-collapse:collapse;
-    margin-top:8px;
-    background:#f7fbff;
-    border:1px solid #8fb7e9;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background-color: #ffffff;
+    border: 1px solid #8fb7e9;
 }
+
+.tutorials-table th, .tutorials-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #7aa6da;
+    text-align: left;
+    font-size: 13px;
+}
+
 .tutorials-table thead th {
-    background:#c7def8;
-    padding:8px 10px;
-    text-align:left;
-    border-bottom:1px solid #7aa6da;
-    font-weight:600;
-    font-size:13px;
+    background-color: #8fb7e9;
+    color: #ffffff;
+    border-bottom: 2px solid #7aa6da;
 }
-.tutorials-table tbody td {
-    padding:8px 10px;
-    border-bottom:1px solid rgba(122,166,218,0.2);
-    font-size:13px;
-}
+
 .tutorials-table tbody tr:hover {
-    background: rgba(0,0,0,0.02);
+    background-color: rgba(0, 0, 0, 0.04);
 }
+
+.tutorials-table td[data-label]::before { /* for responsive: prepend label */
+    content: attr(data-label) ": ";
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+    color: #555;
+}
+
+/* skill icons */
+.skill-stars {
+    white-space: nowrap;
+}
+
+.skill-stars .star {
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.skill-stars .filled {
+    color: #2d529f;
+}
+
+.skill-stars .empty {
+    color: #aac1e0;
+}
+
+.tag-type {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: #d3e8ff;
+    border: 1px solid #7aa6da;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 4px;
+    color: #163d71;
+}
+
 
 /* small icons */
 .icon-inline { vertical-align: middle; height:18px; margin-right:6px; }

@@ -21,13 +21,12 @@
                 </td>
 
                 <td data-label="Skill">
-                    {% set skill = r.header.skill ?: 0 %}
-                    <div style="white-space:nowrap;">
+                    <div class="skill-stars">
                         {% for i in 1..5 %}
-                            {% if i <= skill %}
-                                <span title="star">★</span>
+                            {% if i <= (r.header.skill|default(0)) %}
+                                <span class="star filled">★</span>
                             {% else %}
-                                <span style="opacity:0.25">★</span>
+                                <span class="star empty">☆</span>
                             {% endif %}
                         {% endfor %}
                     </div>
@@ -42,11 +41,9 @@
                 </td>
 
                 <td data-label="Type">
-                    {% if r.taxonomy and r.taxonomy.type %}
-                        {% for t in r.taxonomy.type %}
-                            <span style="display:inline-block; padding:2px 6px; background:#d3e8ff; border-radius:12px; margin-right:6px; font-size:12px;">{{ t }}</span>
-                        {% endfor %}
-                    {% endif %}
+                    {% for t in r.taxonomy.type %}
+                        <span class="tag-type">{{ t }}</span>
+                    {% endfor %}
                 </td>
 
                 <td data-label="Views" style="text-align:right">
