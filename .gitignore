@@ -3,3 +3,4 @@ grav/vendor
 .env.prod
 /.idea
 grav/cache
+grav/logs
