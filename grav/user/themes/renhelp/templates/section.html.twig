@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <article class="page">
+        <h1>{{ page.title }}</h1>
+
+        {# Render page content (markdown) #}
+        <div class="page-content">
+            {{ page.content | raw}}
+        </div>
+
+        {% if page.name == 'section.md'%}
+            {% set rows = [] %}
+            {% for module in page.collection %}
+                {% set rows = rows|merge([module]) %}
+            {% endfor %}
+            {% from 'macros/tutorials_table.twig' import tutorials_table %}
+            {{ tutorials_table(rows) }}
+        {% endif %}
+    </article>
+{% endblock %}

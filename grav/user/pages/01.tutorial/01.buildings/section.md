@@ -1,6 +1,5 @@
 ---
 title: Buildings
-is_section_header: 'true'
 icon: 'images/building.gif'
 content:
   items: '@self.children'

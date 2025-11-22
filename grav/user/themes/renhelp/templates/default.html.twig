@@ -11,11 +11,8 @@
 
         {# If this page has a modular section named tutorials, render it #}
         {% for module in page.collection %}
-            {% if module.template == 'modular/tutorials' or module.template == 'tutorials' %}
-                {% include 'modular/tutorials.html.twig' with {module: module} %}
-            {% endif %}
-            {% if module.header.is_section_header %}
-                {% include 'modular/tutorials.html.twig' with {module: module} %}
+            {% if module.name == 'section.md' %}
+                {% include 'modular/tutorials_section.html.twig' with {module: module} %}
             {% endif %}
         {% endfor %}
     </article>
