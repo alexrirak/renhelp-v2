@@ -1,13 +1,9 @@
 ---
 title: Character Modeling
-summary: Ever wondered how to make your own building? Here you will find help.
+summary: Ever wondered how to make your own characters? Here you will find help.
 type: [RenX, LevelEdit]
-author: PsycoArmy
+author: TestUser
 skill: 5
-software:
-  - RenX
-  - Gmax
-views: 907
 ---
 
 # Character Modeling Tutorial

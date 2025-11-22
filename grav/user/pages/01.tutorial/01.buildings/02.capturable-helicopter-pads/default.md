@@ -1,6 +1,7 @@
 ---
 title: Capturable Helicopter Pads
-body_classes: title-center title-h1h2
+author: zunnie
+skill: 2
 ---
 
 The Helipad models and textures are in zip: [CapturableHelipads.zip](https://multiplayerforums.com/applications/core/interface/file/attachment.php?id=4540)

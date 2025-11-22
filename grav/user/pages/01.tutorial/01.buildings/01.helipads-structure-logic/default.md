@@ -1,6 +1,9 @@
 ---
 title: 4.1 Helipad Structure Logic
-body_classes: title-center title-h1h2
+summary: In scripts 4.1, it is possible to have a building in your map that works as a helipad; learn how to set it up.
+type: [TT 4.1]
+author: Mauler
+skill: 3
 ---
 
 ***In scripts 4.1, it is possible to have a building in your map that works as a helipad. It will be totally separate from the weapons factory/airstrip in that you will be able to buy helicopters even if the war factory/airstrip is down and you will be able to buy ground vehicles if the helipad is down. You can even have someone buying a helicopter and someone else buying a ground vehicle at the same time.***

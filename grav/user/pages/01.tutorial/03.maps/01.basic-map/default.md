@@ -1,15 +1,8 @@
 ---
 title: Creating a Basic Map
-skill_level: 2
-author: General GoO3e
-software:
-  - LevelEdit
-  - Commando
-views: 1336
-body_classes: title-center title-h1h2
-taxonomy:
-    category: tutorials
-    tag: [maps, basics, beginner]
+type: [LevelEdit]
+author: TestUser2
+skill: 2
 ---
 
 # Creating a Basic Map
