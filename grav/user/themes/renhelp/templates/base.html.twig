@@ -8,18 +8,14 @@
     {{ assets.css()|raw }}
     {{ assets.js()|raw }}
 </head>
-{#<title>{{ page.title }}</title>#}
-{#<link rel='stylesheet' href='{{ theme_url }}/css/theme.css'>#}
 <body>
 <div class="ren-container">
     {% include 'partials/header.html.twig' %}
-    {% include 'partials/navigation.html.twig' %}
     {% if theme_config.settings.show_breadcrumbs %}
         {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
 
     <main id="content">
-        {{ page.content }}
         {% block content %}{% endblock %}
     </main>
 

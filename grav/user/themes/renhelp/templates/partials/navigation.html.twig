@@ -1,7 +1,9 @@
 <nav class="ren-nav" role="navigation">
-    <a href="{{ base_url_relative }}">Home</a>
-    <a href="{{ page.find('/') ? page.find('/').url : base_url_relative ~ '/' }}">Getting Started</a>
-    <a href="{{ base_url_relative }}/tutorials">Tutorials</a>
-    <a href="{{ base_url_relative }}/downloads">Downloads</a>
-    <a href="{{ base_url_relative }}/renegade-models">Renegade Models</a>
+    <ul>
+        <li><a href="{{ base_url_relative }}">Home</a></li>
+        <li><a href="{{ page.find('/') ? page.find('/').url : base_url_relative ~ '/' }}">Getting Started</a></li>
+        <li><a href="{{ base_url_relative }}/tutorials">Tutorials</a></li>
+        <li><a href="{{ base_url_relative }}/downloads">Downloads</a></li>
+        <li><a href="{{ base_url_relative }}/renegade-models">Renegade Models</a></li>
+    </ul>
 </nav>

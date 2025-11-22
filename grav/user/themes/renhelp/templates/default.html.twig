@@ -6,7 +6,7 @@
 
         {# Render page content (markdown) #}
         <div class="page-content">
-            {{ page.content }}
+            {{ page.content | raw}}
         </div>
 
         {# If this page has a modular section named tutorials, render it #}

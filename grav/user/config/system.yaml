@@ -1,7 +1,7 @@
 absolute_urls: false
 
 home:
-  alias: '/home'
+  alias: '/tutorial'
 
 pages:
   theme: renhelp

@@ -1,16 +1,10 @@
 <header class="ren-header">
     <div class="ren-logo">
-        {% if theme_config.logo %}
-            <img src="{{ url(theme_config.logo) }}" alt="Logo" />
+        {% if grav.theme.config.settings.logo %}
+            <img src="{{ url(grav.theme.config.settings.logo) }}" alt="Logo" />
         {% else %}
             <h1>{{ site.title }}</h1>
         {% endif %}
     </div>
-    <nav class="ren-nav">
-        <ul>
-            {% for page in pages.visible %}
-                <li><a href="{{ page.url }}">{{ page.menu ?: page.title }}</a></li>
-            {% endfor %}
-        </ul>
-    </nav>
+    {% include 'partials/navigation.html.twig' %}
 </header>
