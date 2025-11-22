@@ -1,9 +1,16 @@
 <div class="ren-section">
     <div class="ren-section-title">
         {% if module.header.icon %}
-            <img class="section-icon" src="{{ url(module.header.icon) }}" alt="{{ module.title }}" />
+            <img class="section-icon"
+                 src="{{ module.url(true) ~ '/' ~ module.header.icon }}"
+                 alt="{{ module.title }}">
         {% endif %}
-        <h2>{{ module.title }}</h2>
+        <div class="ren-section-subtitle">
+            <h2>{{ module.title }}</h2>
+            {% if module.summary %}
+                <div style="font-size:12px; color:#586978;">{{ module.summary | striptags }}</div>
+            {% endif %}
+        </div>
     </div>
 
     {% if module.children.count > 0 %}

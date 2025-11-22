@@ -67,6 +67,12 @@ body {
     margin-top: 24px;
 }
 
+.ren-section-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
 .ren-section-title h2 {
     margin: 0;
     font-size: 16px;
