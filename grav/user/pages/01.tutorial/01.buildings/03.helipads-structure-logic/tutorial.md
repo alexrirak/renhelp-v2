@@ -10,54 +10,109 @@ skill: 3
 
 Firstly, in order to use this functionality you need to be using the sidebar in your map.
 
-Follow this tutorial [http://multiplayerforums.com/index.php?/topic/2980-renegade-sidebar-tutorial/](https://multiplayerforums.com/index.php?/topic/2980-renegade-sidebar-tutorial/)
+Follow this tutorial: [Renegade Sidebar Tutorial](/tutorial/other/renegade-sidebar-tutorial)
 
-to set up the sidebar (make sure to read part 2 and follow that)
+Make sure to read part 2 and follow that.
 
-You also require scripts 4.1 so make sure you have it installed and working in leveledit
+You also require scripts 4.1 so make sure you have it installed and working in LevelEdit.
 
-You also need the attached helipad\\_cinematic.txt \\[**BELOW**\\] file in your map mix file (it relies on the XG\\_HD\\_HTraj.w3d file from the stock renegade always.dat file)
+You also need the attached **helipad_cinematic.txt** file in your map mix file (it relies on the `XG_HD_HTraj.w3d` file from the stock Renegade always.dat file).
 
-Also, open the C&amp;C\\_blah\\_tt.ini file you made in the sidebar tutorial and add the following:
-
-```
-[General]VehicleFactoryVehicleLimit=xAirFactoryVehicleLimit=y
-```
-
-x being the number of ground vehicles players are allowed to build and y being the number of air vehicles players are allowed to build (and yes the numbers are separate)To set up the helipads, firstly you need to put a building on your map to act as the helipad. Create it like any other building (give it MCTs, PTs, damage aggregates and whatever else you want for it)
-
-Then open leveledit and open your map.
-
-Create a new preset underneath \"simple\". This will be the helipad fly-in cinematic object. Untick the \"DefaultHibernationEnable\" checkbox. Tick the \"NotTargetable\" checkbox. Tick the \"IsEditorObject\" checkbox. Tick the \"IsHiddenObject\" checkbox. Leave all the other settings at the default. Attach the script Test\\_Cinematic to this object and give it the parameter helipad\\_cinematic.txt
-
-Next, you need to create a landing position object. This will determine where the helicopters will fly in at.
-
-You will need one for GDI and one for Nod. (the fly-in cinematic object is used for both teams).
-
-Make this one a copy of the Dave's Arrow preset with no changes to the settings.
-
-Next, go to buildings and then air factory. Create an instance of this (one for each team). If you dont see air factory in the list it means you dont have 4.1 installed properly.
-
-Set this preset up as for any other building with all the usual settings and scripts.
-
-Make sure to set the building type to \"helipad\"
+Also, open the `C&C_blah_tt.ini` file you made in the sidebar tutorial and add the following:
 
 ```
-Set LandingPosDistance to 1000Set CinematicTimer to 14.0Set CinematicSlotIndex to 4Set Landing Position Object to the landing position object preset created earlier.Set fly-in Cinematic Object to the fly-in cinematic object preset created earlier.
+[General]
+VehicleFactoryVehicleLimit=x
+AirFactoryVehicleLimit=y
 ```
 
-**No special scripts are required for this building.**Once you have done this, place the helipad building controllers as per normal for buildings. Then place several (2 or 3 works good) of the landing position objects (for the right team) around the helipad at ground level. (these will determine where the helicopters land at).
+*`x` is the number of ground vehicles players are allowed to build, `y` is the number of air vehicles. The limits are separate.*
 
-No you cant have more than one helipad per team, the logic doesn't support it.
+---
 
-Now you need to set up the war factory/airstrip to not build helicopters anymore and to have them be built at the helipad.
+## Setting Up the Helipads
 
-Create temp presets of the war factory and airstrip (or if you are already using temp presets, open them). The only change you need to make is to tick the BuildGroundOnly checkbox.
+First, place a building in your map to act as the helipad—create it like any other building (MCTs, PTs, damage aggregates, etc.).
 
-**Also, when using this you need to tick the allow flying vehicles checkbox under edit-level settings in LE, generate flight data (as part of pathfinding) and have a proper flight roof (i.e. all the things you normally need for a flying map).**
+Then open LevelEdit and open your map.
 
-**Helipad\\_Cinematic.txt contents**
+### 1. Create the Fly‑In Cinematic Object
+Create a new preset under **Simple**. This will be the helipad fly‑in cinematic object.
+
+Configure it as follows:
+
+- Untick **DefaultHibernationEnable**
+- Tick **NotTargetable**
+- Tick **IsEditorObject**
+- Tick **IsHiddenObject**
+- Leave all other settings default
+- Attach the script **Test_Cinematic**
+- Parameter: `helipad_cinematic.txt`
+
+---
+
+### 2. Create the Landing Position Objects
+
+These determine where helicopters will fly in.
+
+You need **one for GDI** and **one for Nod**.
+
+Create each as a copy of **Dave's Arrow** preset with **no changes**.
+
+---
+
+### 3. Create Air Factory Instances
+
+Go to **Buildings → Air Factory**. Create one instance for each team.
+
+If you do not see "Air Factory", 4.1 is not installed correctly.
+
+Set up this preset like any other building, then set:
 
 ```
--1\tCreate_Object,\t\t3, \"XG_HD_HTraj\",\t\t\t0, 0, 0, 0-1\tPlay_Animation,\t\t3, \"XG_HD_HTraj.XG_HD_HTraj\", 0-1\tAttach_to_Bone,\t\t4, 3, \"BN_Trajectory\"-437\tDestroy_Object, 3
+Building Type: Helipad
+LandingPosDistance: 1000
+CinematicTimer: 14.0
+CinematicSlotIndex: 4
+Landing Position Object: (the landing position object preset created earlier)
+Fly‑In Cinematic Object: (the fly-in cinematic object preset)
+```
+
+**No special scripts are required.**
+
+Next:
+
+- Place the helipad building controllers as normal.
+- Place **2–3 landing position objects** (for the correct team) around the helipad at ground level. These determine helicopter landing spots.
+
+> **You cannot have more than one helipad per team — the logic does not support it.**
+
+---
+
+## War Factory / Airstrip Adjustments
+
+To prevent buying helicopters at the war factory / airstrip:
+
+- Create temp presets (or edit existing temp presets).
+- Tick **BuildGroundOnly**.
+
+---
+
+## Flying Requirements
+
+Ensure all normal flying‑map requirements are met:
+
+- Tick **Allow Flying Vehicles** under *Edit → Level Settings*
+- Generate flight data (part of pathfinding)
+- Ensure you have a proper flight roof
+
+---
+
+# helipad_cinematic.txt
+
+```
+-1  Create_Object,      3, "XG_HD_HTraj",          0, 0, 0, 0
+-1  Play_Animation,     3, "XG_HD_HTraj.XG_HD_HTraj", 0
+-1  Attach_to_Bone,     4, 3, "BN_Trajectory"
+-437 Destroy_Object,    3
 ```
