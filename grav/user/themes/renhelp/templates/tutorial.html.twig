@@ -41,6 +41,13 @@
                         </td>
                     </tr>
                 {% endif %}
+
+                {% if h.forum_url %}
+                    <tr>
+                        <th>Discussion:</th>
+                        <td><a href="{{ h.forum_url }}">MPF Forums</a></td>
+                    </tr>
+                {% endif %}
             </table>
         </div>
     {% endif %}

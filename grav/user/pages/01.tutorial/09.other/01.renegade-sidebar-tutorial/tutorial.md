@@ -4,6 +4,7 @@ summary: Now that scripts 4.1 allows you to use the sidebar stand-alone in a Ren
 type: [TT 4.1]
 author: Mauler
 skill: 2
+forum_url: https://multiplayerforums.com/topic/2980-renegade-sidebar-tutorial/
 ---
 You will want to download [Mauler's Renegade Sidebar](files/Maulers_Renegade_SideBar.zip) for this tutorial ([or download from MPF](https://multiplayerforums.com/index.php?/files/file/624-maulers-renegade-sidebar/)).
 

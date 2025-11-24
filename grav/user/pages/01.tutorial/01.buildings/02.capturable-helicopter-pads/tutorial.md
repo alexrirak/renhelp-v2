@@ -2,6 +2,7 @@
 title: Capturable Helicopter Pads
 author: zunnie
 skill: 2
+forum_url: https://multiplayerforums.com/topic/711-capturable-repair-pads/
 ---
 
 The Helipad models and textures are in zip: [CapturableHelipads.zip](https://multiplayerforums.com/applications/core/interface/file/attachment.php?id=4540)

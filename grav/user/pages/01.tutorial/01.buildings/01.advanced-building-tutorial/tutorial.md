@@ -4,6 +4,7 @@ summary: A Step by Step to create a full functional building like the Westwood o
 type: [RenX, LevelEdit]
 author: Läubi
 skill: 3
+forum_url: https://multiplayerforums.com/topic/148-advanced-building-tutorial-author-l%C3%A4ubi/
 ---
 **Make your own Building:**  
 a Step by Step to create a full functional building like the Westwood ones.
