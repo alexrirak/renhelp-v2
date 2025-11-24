@@ -11,18 +11,20 @@ pages:
     markdown: true
     twig: false
 
+force_ssl: false      # Use HTTPS only (redirect from HTTP -> HTTPS)
+
 cache:
-  enabled: true
+  enabled: true       # Greatly speeds up the site
   check:
-    method: file
+    method: file      # file for local, hash for production
   driver: auto
   prefix: 'g'
 
 twig:
-  cache: true
-  debug: true
-  auto_reload: true
-  autoescape: false
+  cache: true         # Greatly speeds up the site
+  debug: true         # Display debug messages
+  auto_reload: true   # Auto reload, disables file modification checks for twig files if disabled
+  autoescape: true    # Protects from many XSS attacks, but requires twig updates if used in older sites/themes/plugins
 
 assets:
   css_pipeline: false
@@ -33,12 +35,26 @@ assets:
 
 errors:
   display: true
-  log: true
+  log: true           # Log errors for later inspection
 
 debugger:
-  enabled: false
+  enabled: false      # Never keep debugger enabled in a live site.
+  censored: true      # In case if you happen to enable debugger, avoid displaying sensitive information
   twig: true
   shutdown:
     close_connection: true
+
 gpm:
   verify_peer: true
+
+session:
+  enabled: false      # NOTE: Disable sessions if you do not use user login and/or forms.
+  secure: true        # Use this as your site should be using HTTPS only
+  httponly: true      # Protects session cookies against client side scripts and XSS
+  samesite: Strict    # Prevent all cross-site scripting attacks
+  split: true         # Separate admin session from the site session for added security
+
+strict_mode:          # Removes backward compatibility but improves site security.
+  yaml_compat: false
+  twig_compat: false
+  blueprint_compat: false
