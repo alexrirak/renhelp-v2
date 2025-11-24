@@ -6,13 +6,13 @@
             
             {# Display tutorial metadata #}
             {% if page.header.author or page.header.type or page.header.skill %}
-            <div class="tutorial-metadata" style="background: #f7f7f7; padding: 15px; margin: 20px 0; border-left: 4px solid #4CAF50; border-radius: 3px;">
+            <div class="tutorial-metadata">
                 {% if page.header.author %}
-                <p style="margin: 5px 0;"><strong>Author:</strong> {{ page.header.author }}</p>
+                <p><strong>Author:</strong> {{ page.header.author }}</p>
                 {% endif %}
                 
                 {% if page.header.type %}
-                <p style="margin: 5px 0;"><strong>Type:</strong> 
+                <p><strong>Type:</strong> 
                 {% if page.header.type is iterable %}
                     {{ page.header.type|join(', ') }}
                 {% else %}
@@ -22,14 +22,12 @@
                 {% endif %}
                 
                 {% if page.header.skill %}
-                <p style="margin: 5px 0;"><strong>Skill Level:</strong> {{ page.header.skill }}</p>
+                <p><strong>Skill Level:</strong> {{ page.header.skill }}</p>
                 {% endif %}
             </div>
             {% endif %}
             
-            <p>
-                {{ page.content|raw }}
-            </p>
+            {{ page.content|raw }}
         </div>
     {% endblock %}
 
