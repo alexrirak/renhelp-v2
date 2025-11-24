@@ -1,6 +1,7 @@
 ---
 title: Capturable Helicopter Pads
 author: zunnie
+type: [LevelEdit]
 skill: 2
 ---
 

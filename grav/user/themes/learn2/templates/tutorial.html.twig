@@ -13,7 +13,7 @@
                 
                 {% if page.header.type %}
                 <p><strong>Type:</strong> 
-                {% if page.header.type is iterable %}
+                {% if page.header.type is iterable and page.header.type is not string %}
                     {{ page.header.type|join(', ') }}
                 {% else %}
                     {{ page.header.type }}
