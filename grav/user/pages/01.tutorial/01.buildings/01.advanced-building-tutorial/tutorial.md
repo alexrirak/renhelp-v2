@@ -5,149 +5,194 @@ type: [RenX, LevelEdit]
 author: Läubi
 skill: 3
 ---
-**![renx_ico.gif](http://renhelp.multiplayerforums.com/Images/renx_ico.gif) RenX / ![le_ico.gif](http://renhelp.multiplayerforums.com/Images/le_ico.gif) Leveledit**
+**Make your own Building:**  
+a Step by Step to create a full functional building like the Westwood ones.
 
-**Make your own Building:**
+**Important!! Read this tutorial carefully.  
+If something didn’t work as you have expected it, check the corresponding part of the tutorial if you have not missed a thing.**
 
-a Step by Step to create a full functional building like the Westwood ones.  
-  
-**Important!! Read this tutorial carefully.   
-If something didn`t work as you have expected it, check the coresponding part of the tutorial if you have not miss a thing.**
+---
 
-1. First of all, of course you need you building. I used for this tutorial is the Atreides Weapon factory for the Battle for Dune Mod  
-    ![image-42-01_GEB.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-01_GEB.JPG)  
-      
-    It is important that you move your whole building to the center of RenX.  
-     You also should already have setup all collision settings.
-2. Now select all the meshes that are part of the **EXTERIOR**. This should be all parts of the exterior of the bulding, excluding any emitters, animations or doors.  
-    ![image-42-02_EXTMESH.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-02_EXTMESH.JPG)  
-      
-     Then goto the W3D-Tools --&gt; Assign Node Names:  
-    ![image-42-03_ASINGNAMES.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-03_ASINGNAMES.JPG)  
-      
-     In the following dialog uncheck/check the Options you see on the screen below, enter at the **Root Name:** entry a short name, e.g. atrwep (atreides weponfactory) followed by a ^.  
-     You should write this down. because youll need that later, I`ll refer to this name as the **Meshprefix** later.  
-    **The Meshprefix should NOT exceed 6 characters.**  
-    ![image-42-04_ROOTNAMES.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-04_ROOTNAMES.JPG)
-3. Congratulation you have now created a buildings exterior. Now goto Group --&gt; Group and enter a name (e.g. wep\\_ext)  
-    ![image-42-05_GROUP.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-05_GROUP.JPG)
-4. Now hide your ExteriorGroup and unhide all parts of the interior, again excluding any emitters, animations or doors.  
-    ![image-42-06_INT.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-06_INT.JPG)  
-      
-     Again select all meshes and open the same dialog as for the interior. Enter the Meshprefix followed by a #.  
-    ![image-42-07_INT_2.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-07_INT_2.JPG)  
-      
-     Again Group this and name it for example wep\\_int:  
-    ![image-42-08_GROUP_INT.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-08_GROUP_INT.JPG)
-5. Now we will add the doors, emitters as well as animate them for the later use.  
-    **If you have already done this, you can just skip this part.**  
-     For the doors I`ll use the standard Rengade MP ones, but of course you can make your own ones.
-6. As you can see, I have unhidden the Ext/Int-Group to better align things. For the doors you need the name of the preset of the door, the standard Rengade doors name is `mpdr\\_0` create a box 1x1x1 at the topview, and place it at the location where the door should be placed, name the box : mpdr\\_0~ (or the name your door-preset has in Leveledit + a ~ ) add a 00 after the ~ for the first, a 01 for the second and so on.  
-    When you have placed all doors, group the doors e.g. as wep\\_doors.  
-      
-    ![image-42-09_DOORS.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-09_DOORS.JPG)  
-      
-      
-    **When you are done with the doors,** you need some damage emitters. You can make your own with W3D-Editor or use Renegade ones, extract them with XCC\\_Mixer you can identify them by the leading e\\_ (e.g.[e\\_19fire1.w3d](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/Tutorials/TUT_blding__/e_19_fire1.w3d)). For all Emitters you should extract (or download) the [e\\_master01.tga](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/Tutorials/TUT_blding__/e_master01.zip) so you can see the emitter effects:  
-    ![image-42-10_EMITTER.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-10_EMITTER.JPG)  
-      
-    **Now create three boxes (1x1x1) named:** emitter0, emitter25, emitter50, emitter75. I will refer to this as the `DamageBox`.  
-     After that, create 1x1x1 boxes named like the emitter file (without the w3d) that should be displayed later, in this case e\\_fire1. I will refer to this as `EmitterBox`.  
-    **IMPORTANT:** Never just rename the emitter file!! You must edit the name in w3d-Viewer and re-export it or the file will not be loaded or even crash Renegade!!!  
-     Now link the EmitterBox to the DamageBox emitter75 if this emitter should be showed up at the state for when the building is 25% damaged, emitter50 for half damged, emitter25 when the bulding is damaged by 75% and emitter0 when the building is detroyed.  
-      
-     For this use the Link tool   
-    ![image-42-11_LINK.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-11_LINK.JPG) ![image-42-12_DRAG.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-12_DRAG.JPG)  
-     and klick and drag from your EmitterBox to your DamageBox (The damage box will flash for about 2 sek when this is done succesfull.  
-      
-    **Then place all around your building emitters** or objects that should be displayed at the different states and link them to the coresponding DamageBox.  
-     I recommend to save your work now if you have not done this before!!
-7. **Now we must make an animation, so Renegade later know what parts must be showed at the damage states.**  
-     For that you should reopen RenX, because the `Trackview` that we will need often conflicts with the RenegadeMaterialEditor for Gmax, restarting RenX solves the problem.  
-     Open now the `Trackview`: ![image-42-13_TRACKVIEW.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-13_TRACKVIEW.JPG)  
-    **On the Trackview browse to Objects --&gt; emitter75:**  
-    ![image-42-14_TW2.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-14_TW2.JPG)  
-    **Add a visibility track** by clicking the eye icon ![image-42-15_EYE.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-15_EYE.JPG) that will add a new option to your Object:  
-    ![image-42-16_VISIBLTRACK.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-16_VISIBLTRACK.JPG)  
-     Click on the new option and add via the ![image-42-17_ADDKEYS.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-17_ADDKEYS.JPG) at frame 1, 2 and 3 a new key.  
-      
-    ![image-42-18_ADDKEYS.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-18_ADDKEYS.JPG)  
-      
-     Rightklick the first key and change the value to 0 (invisible)  
-    ![image-42-19_KEYOPTION.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-19_KEYOPTION.JPG)  
-      
-     Now change this also for key2. The trird key must not be changed and should stay at value 1 (visible)  
-      
-    Repeat this process for all other DamageBoxes, but switch the keys to the following:When you have done this, group all DamgeBoxed and the EmitterBoxes e.G wep\\_emitter
-    
-    
-    - emitter50 frame 1,4,5
-    - emitter25 frame 1,6,7
-    - emitter0 frame 1,8,9
-    - **Now we will prepare the PT and the MCT** (This is optional)  
-         Your PT`s and MCT can have also animations like the damage emitters. For the PT`s you might want to add animations for a powerless building like westwood does. for thsi jsut create four more emitter boxes( emitter0p, emitter25p and so on) and count up the last frame by one for each state liek you have seen in Section 6.  
-          
-         Select all MCT Meshes and use the naming tool that is described in Section 2, and use as a basename the meshprefix#mct (e.g. atrwep#mct). repeat this for the PT`s also but use meshprefix#pt here (e.g. atrwep#pt)  
-         Group all your PT`s and the MCT to a seperate group, e.g. wep\\_pct and wep\\_mct
-    - **Exporting time.**  
-         Now you must export all parts for the use in Leveledit.  
-          
-        Export:  
-         \\* the Interior Group as mesprefix\\_int (Renegade Terrain)  
-         \\* the Doors Group as meshprefix\\_doors (Renegade Terrain)  
-         \\* the Damage and Emitter as meshprefix\\_dam (Hirachy Animated Model)  
-         \\* The MCT Group as meshprefix\\_mct (Hirachy Animated Model)  
-         \\* The PT Group as meshprefix\\_pt (Hirachy Animated Model)  
-          
-         In my example I`ll get 5 files: atrwep\\_int.w3d, atrwep\\_doors.w3d, atrwep\\_dam.w3d, atrwep\\_mct.w3d, atrwep\\_pt.w3d  
-        ![image-42-20_W3DS.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-20_W3DS.JPG)  
-         Copy all these files into Your modfolder if you have not done this already, a seperate folder e. g. buildingparts would be a nice idea.  
-        ![image-42-21_FOLD.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-21_FOLD.JPG)
-    - **Setup your exterior mesh for use in Maps.**  
-         You might wonder what will happen to the exterior mesh. We must jsut setup some very simple parts to finish this:  
-         create a box from the TOPVIEW (1x1x1) in the EXACT center of Gmax/Renx. Name this box meshprefix\\_int~, then clone the box (or create a new one) and name it meshprefix\\_doors~ and so on for all w3d`s you have exportet in part 8. then select all these boxes and activate the \\[x\\] Hide and \\[x\\]Aggregate w3d option.  
-        ![image-42-23_W3D.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-23_W3D.JPG)  
-          
-         After that select your ExteriorMesh and these Boxes and group them to for example AtreidesWeponfactory and save your work.  
-         You can now Merge this Group into your map(s) like the orginal westwood buildings.
-    - **Setup everything in Leveledit.**  
-         Now start the Leveleditor and Load your Modpackage.  
-          
-         Goto Terrain--&gt;Add and enter a name, e.g. mybuildings  
-        ![image-42-24_LEADGROUPT.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-24_LEADGROUPT.JPG)  
-          
-         Select this new group and press again add. Enter as name meshprefix\\_doors (e.g. atrwep\\_doors) and under the settings tab under m\\_Modelname select your \\_doors w3d file.  
-        ![image-42-25_W3DSEL.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-25_W3DSEL.JPG)  
-         Repeat this part also for the mesprefix\\_int w3d file, you`ll then has 2 new entry`s:  
-        ![image-42-26_GROUP.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-26_GROUP.JPG)  
-          
-         Now change to the Tiles Tab and again press add create a new entry named: mybuildingtiles under the Physics Type select BuildingAggregate.  
-        ![image-42-27_BLDAGTILES.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-27_BLDAGTILES.JPG)  
-          
-         Select this new group and once again press add, enter as name: meshprefix\\_dam, under the Physics Model be sure that the type is Building Aggregate, change the Model Name to your coresponding w3d file, the AnimationMode to Manual  
-        ![image-42-28_SETUP_DAM.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-28_SETUP_DAM.JPG)  
-          
-         Scroll down to the Building Behavior Settings and change the AnimLogicMode to ANIM\\_LOGIC\\_SEQUENCE.  
-         The Buidling state for 75% to 1, 1 as showed below, for 50% 2,2 for 25% 3,3 for detroyed 4,4.  
-         Repeat this also for the State: Power OFF.  
-        ![image-42-29_SETUP2.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-29_SETUP2.JPG)  
-          
-         After that press OK, again use the add, now enter as name: meshprefix\\_mct (e.g atrwep\\_mct), select the needed w3d, setup everything like before, but check the checkbox labled \\[x\\] IsMCT.  
-         If your MCT also has animation sequences, you must set them up coresponding to your animation as described above.  
-        ![image-42-30_MCT.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-30_MCT.JPG)  
-          
-         Again add another tile, name it meshprefix\\_pt, set it up as explained for the MCT, but let the \\[ \\] IsMCT uncheked.  
-          
-         Now you have three new entrys in your mybuldingstiles group:  
-        ![image-42-31_FINALY.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-31_FINALY.JPG)
-    - **Congratulations!!!**  
-         You are finished now. Add your Building Group you have created in part 9 to your map via the MERGE command in RenX/Gmax, export it as Renegade Terrain and enjoy your bulding.
-    - **One Last Step:**  
-         To make your building work ingame you have to Clone wia the ADD button one of the Buildingcontrollers, for example mine is a Weponsfactory, so I clone the GDI\\_Weponsfactory:  
-        ![image-42-32_CLONE.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-32_CLONE.JPG)  
-          
-         You can name it whatever you want.... but you must fill in the MESHPREFIX into the coresponding field:  
-        ![image-42-33_MESHPREFIX.JPG](http://renhelp.multiplayerforums.com/Images/Buildings/Adv_Building_Tut/image-42-33_MESHPREFIX.JPG)  
-          
-         Of course you can edit other settings like health in this dialog too,play around abit with these settings
-    - **Have Fun by detroy all your hard work ingame**
+## 1. Prepare Your Building
+First of all, of course you need your building. I used for this tutorial the Atreides Weapon Factory for the Battle for Dune Mod.  
+![Building exterior preview](images/image-42-01_GEB.jpg)
+
+It is important that you move your whole building to the center of RenX.  
+You also should already have set up all collision settings.
+
+---
+
+## 2. Name Exterior Meshes
+Now select all the meshes that are part of the **EXTERIOR**. This should be all parts of the exterior of the building, excluding any emitters, animations or doors.  
+![Exterior meshes](images/image-42-02_EXTMESH.jpg)
+
+Then go to the **W3D-Tools → Assign Node Names** menu:  
+![Assign node names](images/image-42-03_ASINGNAMES.jpg)
+
+In the dialog, uncheck/check the options as shown, and in the **Root Name** entry put a short name, e.g., `atrwep` (for Atreides Weaponfactory) followed by a `^`.  
+You should write this down — you’ll need it later. I’ll refer to this name as the **Meshprefix** later.
+> **Important:** The Meshprefix should **NOT exceed 6 characters.**  
+![Root name dialog](images/image-42-04_ROOTNAMES.jpg)
+
+---
+
+## 3. Group the Exterior
+Congratulations — you have now created a building’s exterior.  
+Now go to **Group → Group** and enter a name (for example, `wep_ext`).  
+![Group exterior](images/image-42-05_GROUP.jpg)
+
+---
+
+## 4. Prepare the Interior
+Now hide your exterior group and unhide all parts of the interior (again excluding any emitters, animations or doors).  
+![Interior meshes](images/image-42-06_INT.jpg)
+
+Select all those interior meshes and open the same naming dialog. Enter the Meshprefix followed by a `#`.  
+![Interior naming](images/image-42-07_INT_2.jpg)
+
+Then group them (for example, call the group `wep_int`).  
+![Group interior](images/image-42-08_GROUP_INT.jpg)
+
+---
+
+## 5. Doors and Emitters
+Now we will add the doors and emitters (if you have not already done so).  
+If you're using the standard Renegade doors, their preset name is `mpdr_0`.  
+Create a 1×1×1 box in Top View at the position where the door should go, name it `mpdr_0~` (or whatever your door preset name is + `~`). For multiple doors, add `00`, `01`, etc. after the `~`.  
+Group the doors, for example `wep_doors`.  
+![Doors box](images/image-42-09_DOORS.jpg)
+
+For damage emitters: extract or download `.w3d` files (example: `e_19_fire1.w3d`) and the emitter texture (`e_master01.tga`).  
+Use XCC Mixer to extract them.  
+Create three 1×1×1 “DamageBoxes” named: `emitter0`, `emitter25`, `emitter50`, `emitter75`.  
+Then create three 1×1×1 “EmitterBoxes” named after the emitter file (without `.w3d`).  
+**Important:** Never simply rename the emitter file — re-export it from w3d-Viewer or Renegade may crash!  
+Now link the EmitterBox to the DamageBox emitter75 if this emitter should be shown at the state for when the building is 25% damaged, emitter50 for half damaged, emitter25 when the building is damaged by 75% and emitter0 when the building is destroyed. 
+
+Use the Link tool and click and drag from your EmitterBox to your DamageBox (The damage box will flash for about 2 sec when this is done successfully).
+
+![Link tool](images/image-42-11_LINK.jpg)
+![Drag link](images/image-42-12_DRAG.jpg)
+
+Then place all around your building emitters or objects that should be displayed at the different states and link them to the coresponding DamageBox.
+I recommend to save your work now if you have not done this before!!
+
+---
+
+## 6. Animate Visibility Tracks
+Now we must make an animation, so Renegade later know what parts must be showed at the damage states.
+
+Reopen **RenX Trackview** (restart RenX if needed):  
+![Trackview](images/image-42-13_TRACKVIEW.jpg)
+
+In the Trackview, browse to **Objects → emitter75**:  
+![Emitter75 object](images/image-42-14_TW2.jpg)
+
+Add a *visibility track* (click the eye icon):  
+![Eye icon](images/image-42-15_EYE.jpg)  
+You should then see a new option.  
+![Visibility track](images/image-42-16_VISIBLTRACK.jpg)
+
+Add keys at frames 1, 2, and 3 using the *Add Keys* button:  
+![Add keys](images/image-42-17_ADDKEYS.jpg)  
+![Added keys](images/image-42-18_ADDKEYS.jpg)
+
+Set the first key’s value to 0 (invisible), the second also to 0, and the third to 1 (visible):  
+![Set visibility](images/image-42-19_KEYOPTION.jpg)
+
+Repeat for all other damage boxes, using these framing schemes:
+
+- `emitter50`: keys at frames 1, 4, 5
+- `emitter25`: keys at frames 1, 6, 7
+- `emitter0`: keys at frames 1, 8, 9
+
+Optionally, prepare PT and MCT:
+
+- Your PTs and MCT can have also animations like the damage emitters. 
+- For the PTs you might want to add animations for a powerless building like westwood does. 
+- For this just create four more emitter boxes( `emitter0p`, `emitter25p` and so on) and count up the last frame by one for each state like you have seen in Section 6.
+- Select all MCT Meshes and use the naming tool that is described in Section 2, and use as a basename the meshprefix#mct (e.g. atrwep#mct). 
+- Repeat this for the PTs also but use `meshprefix#pt` here (e.g. `atrwep#pt`) Group all your PTs and the MCT to a seperate group, e.g. `wep_pct` and `wep_mct`
+
+---
+
+## 7. Export Models for Leveledit
+Now export all parts for use in Leveledit:
+
+| Part | Filename / Purpose |
+|---|---|
+| Interior group | `meshprefix_int.w3d` (Terrain) |
+| Doors group | `meshprefix_doors.w3d` (Terrain) |
+| Damage + Emitters | `meshprefix_dam.w3d` (Animated Model) |
+| MCT group | `meshprefix_mct.w3d` (Animated Model) |
+| PT group | `meshprefix_pt.w3d` (Animated Model) |
+
+Example: if your prefix is `atrwep`, you get:  
+`atrwep_int.w3d, atrwep_doors.w3d, atrwep_dam.w3d, atrwep_mct.w3d, atrwep_pt.w3d`  
+![W3D files](images/image-42-20_W3DS.jpg)  
+Place them in your mod folder (e.g. `buildingparts`).  
+![Mod folder](images/image-42-21_FOLD.jpg)
+
+---
+
+## 8. Prepare Exterior For Maps
+Create a 1×1×1 box in Top View at the *exact center* of RenX / Gmax. Name it `meshprefix_int~`.  
+Clone or create more boxes named: `meshprefix_doors~`, `meshprefix_dam~`, etc.  
+Enable **Hide** and **Aggregate W3D** on those boxes:  
+![W3D aggregate](images/image-42-23_W3D.jpg)
+
+Select your exterior mesh + these boxes and group them (e.g. `AtreidesWeaponfactory`). Save, then merge into your map as terrain.
+
+---
+
+## 9. Setup in Leveledit
+Open Leveledit → Load your mod package.  
+Go to **Terrain → Add**, name the group (e.g. `mybuildings`)  
+![Leveleditor add group](images/image-42-24_LEADGROUPT.jpg)
+
+Select this new group and press again add. Enter as name `meshprefix_doors` (e.g. `atrwep_doors`) and under the settings tab under `m_Modelname` select your `_doors` w3d file:  
+![W3D select](images/image-42-25_W3DSEL.jpg)
+
+Repeat for `meshprefix_int`:  
+![Add interior](images/image-42-26_GROUP.jpg)
+
+In **Tiles** tab → Add → name: `mybuildingtiles`, set Physics Type to `BuildingAggregate`:  
+![Building tiles](images/image-42-27_BLDAGTILES.jpg)
+
+Select this new group and once again press add, enter as name: `meshprefix_dam`, under the Physics Model be sure that the type is `Building Aggregate`, change the Model Name to your corresponding w3d file, the `AnimationMode` to `Manual`:  
+![Setup dam](images/image-42-28_SETUP_DAM.jpg)
+
+Scroll down to the Building Behavior Settings and change the following:
+- AnimLogicMode = `ANIM_LOGIC_SEQUENCE`
+- Damage-state mapping:
+    - 75% → seq 1
+    - 50% → seq 2
+    - 25% → seq 3
+    - Destroyed → seq 4  
+      Repeat for “Power OFF” state too.  
+      ![Behavior setup](images/image-42-29_SETUP2.jpg)
+
+After that press OK, again use the add, now enter as name: `meshprefix_mct` (e.g `atrwep_mct`), select the needed w3d, setup everything like before, but check the checkbox labeled `IsMCT`.
+If your MCT also has animation sequences, you must set them up corresponding to your animation as described above.  
+![MCT tile](images/image-42-30_MCT.jpg)
+
+Again add another tile, name it `meshprefix_pt`, set it up as explained for the MCT, but let the `IsMCT` unchecked.
+
+After that, you should have three tiles under your `mybuldingstiles` group: mct, pt, dam.  
+![Final tiles](images/image-42-31_FINALY.jpg)
+
+---
+
+## 10. Add to Map & Building Controller
+You are finished now. Add your Building Group you have created in part 9 to your map via the `MERGE` command in RenX/Gmax, export it as Renegade Terrain and enjoy your bulding.
+
+To make your building work in game you have to Clone via the ADD button one of the `Buildingcontrollers`, for example mine is a `Weaponsfactory`, so I clone the `GDI_Weponsfactory`: 
+![Clone controller](images/image-42-32_CLONE.jpg)  
+
+You can name it whatever you want.... but you must fill in the `MESHPREFIX` into the corresponding field:
+![Set prefix](images/image-42-33_MESHPREFIX.jpg)
+
+Of course you can edit other settings like health in this dialog too, play around a bit with these settings
+
+**Have Fun by destroying all your hard work in game**
+
