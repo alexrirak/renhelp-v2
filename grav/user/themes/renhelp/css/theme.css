@@ -165,3 +165,62 @@ body {
         margin-bottom:4px;
     }
 }
+
+/* tutorial metadata */
+/* Subtle metadata box */
+.tutorial-meta {
+    margin: 15px 0 25px 0;
+    padding: 10px 12px;
+    background: #f7f7f7;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    font-size: 0.92rem;
+}
+
+/* Metadata table refinement */
+.tutorial-meta table {
+    width: auto;                       /* no stretching */
+    border-collapse: collapse;
+}
+
+.tutorial-meta tbody {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.tutorial-meta th {
+    text-align: left;
+    padding: 3px 8px 3px 0;
+    font-weight: bold;
+    color: #444;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.tutorial-meta td {
+    padding: 3px 0;
+    color: #222;
+    font-size: 0.9rem;
+}
+
+/* star icons */
+.skill-stars .star {
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+.skill-stars .star.filled {
+    color: #d5a500;
+}
+
+.tool-tag {
+    display: inline-block;
+    background: #e8e8e8;
+    padding: 2px 6px;
+    margin-right: 3px;
+    border-radius: 3px;
+    font-size: 0.82rem;
+    border: 1px solid #cecece;
+}
+
