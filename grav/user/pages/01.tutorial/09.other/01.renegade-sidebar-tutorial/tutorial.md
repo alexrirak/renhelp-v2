@@ -5,7 +5,7 @@ type: [TT 4.1]
 author: Mauler
 skill: 2
 ---
-You will want to download [Mauler's Renegade Sidebar](https://multiplayerforums.com/index.php?/files/file/624-maulers-renegade-sidebar/) for this tutorial.
+You will want to download [Mauler's Renegade Sidebar](files/Maulers_Renegade_SideBar.zip) for this tutorial ([or download from MPF](https://multiplayerforums.com/index.php?/files/file/624-maulers-renegade-sidebar/)).
 
 ***Now that scripts 4.1 allows you to use the sidebar stand-alone in a Renegade map, it's time to write a tutorial for how it's done.***
 
