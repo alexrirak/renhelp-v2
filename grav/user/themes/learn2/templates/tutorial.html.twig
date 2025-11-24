@@ -1,0 +1,38 @@
+{% embed 'partials/base.html.twig' with { github_link_position: false } %}
+
+    {% block content %}
+        <div id="body-inner">
+            <h1>{{ page.title }}</h1>
+            
+            {# Display tutorial metadata #}
+            {% if page.header.author or page.header.type or page.header.skill %}
+            <div class="tutorial-metadata" style="background: #f7f7f7; padding: 15px; margin: 20px 0; border-left: 4px solid #4CAF50; border-radius: 3px;">
+                {% if page.header.author %}
+                <p style="margin: 5px 0;"><strong>Author:</strong> {{ page.header.author }}</p>
+                {% endif %}
+                
+                {% if page.header.type %}
+                <p style="margin: 5px 0;"><strong>Type:</strong> 
+                {% if page.header.type is iterable %}
+                    {{ page.header.type|join(', ') }}
+                {% else %}
+                    {{ page.header.type }}
+                {% endif %}
+                </p>
+                {% endif %}
+                
+                {% if page.header.skill %}
+                <p style="margin: 5px 0;"><strong>Skill Level:</strong> {{ page.header.skill }}</p>
+                {% endif %}
+            </div>
+            {% endif %}
+            
+            <p>
+                {{ page.content|raw }}
+            </p>
+        </div>
+    {% endblock %}
+
+    {% block footer %}{% endblock %}
+
+{% endembed %}
