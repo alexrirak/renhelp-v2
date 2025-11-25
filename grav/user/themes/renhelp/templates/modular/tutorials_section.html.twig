@@ -24,6 +24,6 @@
     {% endif %}
 
     {% from 'macros/tutorials_table.twig' import tutorials_table %}
-    {{ tutorials_table(rows) }}
+    {{ tutorials_table(rows.order('title')) }}
 </div>
 
