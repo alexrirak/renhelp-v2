@@ -7,4 +7,4 @@ content:
         dir: asc
 ---
 
-Welcome to the tutorial index. Sections below are modular or child pages.
+Welcome to RenHelp.Net! Please see the sections below for tutorials on various topics related to Command & Conquer Renegade.
