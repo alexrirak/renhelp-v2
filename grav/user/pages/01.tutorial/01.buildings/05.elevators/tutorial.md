@@ -20,7 +20,7 @@ forum_url: https://multiplayerforums.com/topic/154-elevators-author-l%C3%A4ubi/
 
 Here is a very quick example elevator:
 
-![Elevator Base](images/image-41-ELEVATOR_PART1.jpg)
+[![Elevator Base](images/image-41-ELEVATOR_PART1.jpg?classes=img-maxsize)](images/image-41-ELEVATOR_PART1.jpg)
 
 An elevator consists of:
 
@@ -39,7 +39,7 @@ To help estimate size, Single Player elevators are approximately:
 
 You can create a reference box to compare:
 
-![Elevator Size](images/image-41-ELEV_SIZE.jpg)
+[![Elevator Size](images/image-41-ELEV_SIZE.jpg?classes=img-maxsize)](images/image-41-ELEV_SIZE.jpg)
 
 (My elevator is slightly oversized here, but this is only to get a general idea.)
 
@@ -51,8 +51,8 @@ Because the **Renegade engine does not like textured objects that move**, we cre
 
 These are just untextured meshes that define where players collide.
 
-![Elevator Collision Blockers](images/image-41-ELEV_BLOCKER.jpg)
-![Elevator W3D](images/image-41-ELEV_W3D.jpg)
+[![Elevator Collision Blockers](images/image-41-ELEV_BLOCKER.jpg?classes=img-maxsize)](images/image-41-ELEV_BLOCKER.jpg)
+[![Elevator W3D](images/image-41-ELEV_W3D.jpg?classes=img-maxsize)](images/image-41-ELEV_W3D.jpg)
 
 Enable **W3D Hide** and collision settings for:
 
@@ -71,7 +71,7 @@ An elevator has **3 animation stages**.
 ### Stage 1 — Base Frame
 Move all your parts of the elevator so it is on the Top-Part, with the door open for entry at the Top:
 
-![Stage 1](images/image-41-ELEV_STAGE1.jpg)
+[![Stage 1](images/image-41-ELEV_STAGE1.jpg?classes=img-maxsize)](images/image-41-ELEV_STAGE1.jpg)
 
 As you can see I just moved the whole platform up, and lowered the ring so that the player can enter the elevator at the top.
 
@@ -80,12 +80,12 @@ As you can see I just moved the whole platform up, and lowered the ring so that 
 ### Stage 2 — Moving Animation
 Click the **Animate** button:
 
-![Animate Button](images/image-41-ANIM_BUTTON.jpg)
+[![Animate Button](images/image-41-ANIM_BUTTON.jpg?classes=img-maxsize)](images/image-41-ANIM_BUTTON.jpg)
 
 - Go to **Frame 1**, move your door so it is closed (you can use more than one frame if needed, just note this frame somewhere)
 - Go to **Frame 10**, move elevator to **bottom** with the door closed (same comment as before for the close door)
 
-![Animated Elevator](images/image-41-ELEV_ANIMATED.jpg)
+[![Animated Elevator](images/image-41-ELEV_ANIMATED.jpg?classes=img-maxsize)](images/image-41-ELEV_ANIMATED.jpg)
 
 Write down this bottom frame — you will need it later.
 
@@ -96,7 +96,7 @@ Animate the **bottom door opening**.
 
 My example ends at **Frame 11**, but your animation can use more frames.
 
-![Door Opening](images/image-41-ELEV_ANIM_END.jpg)
+[![Door Opening](images/image-41-ELEV_ANIM_END.jpg?classes=img-maxsize)](images/image-41-ELEV_ANIM_END.jpg)
 
 Once you are finished, deactivate animation mode and feel good that the work is nearly done.
 
@@ -108,7 +108,7 @@ Export the elevator to your Modpacket as:
 - **Hierarchy Animated Model**
 - Frame **0 through final frame** (e.g., 11)
 
-![W3D Export](images/image-41-W3D_EXPORT.jpg)
+[![W3D Export](images/image-41-W3D_EXPORT.jpg?classes=img-maxsize)](images/image-41-W3D_EXPORT.jpg)
 
 ---
 
@@ -116,7 +116,7 @@ Export the elevator to your Modpacket as:
 
 Open LevelEdit (Commando), go to **Tiles**, click **Add**.
 
-![Add Elevator](images/image-41-AD_ELEV.jpg)
+[![Add Elevator](images/image-41-AD_ELEV.jpg?classes=img-maxsize)](images/image-41-AD_ELEV.jpg)
 
 Now enter a name, e.g. `my_elevator`, and switch to the Settings Tab. Set:
 
@@ -126,7 +126,7 @@ Select your W3D and change
 - **Collision Mode:** `STOP`
 - **Animation Mode:** `Manual`
 
-![Elevator Settings 1](images/image-41-ELEV_LESET1.jpg)
+[![Elevator Settings 1](images/image-41-ELEV_LESET1.jpg?classes=img-maxsize)](images/image-41-ELEV_LESET1.jpg)
 
 ### Frame Values to Set
 
@@ -139,7 +139,7 @@ Scroll a bit down and set
 | **ElevatorStartTop**      | Usually Frame 0                                |
 | **ElevatorStoppedBottom** | Elevator at bottom with door closed (Frame 10) |
 
-![Elevator Settings 2](images/image-41-ELEV_LESET2.jpg)
+[![Elevator Settings 2](images/image-41-ELEV_LESET2.jpg?classes=img-maxsize)](images/image-41-ELEV_LESET2.jpg)
 
 Set **CloseDelay** to how long the elevator should take to go up/down and press OK.
 
@@ -149,7 +149,7 @@ Set **CloseDelay** to how long the elevator should take to go up/down and press 
 
 Select your elevator again → **Mod** → **Zones** tab.
 
-![Zones](images/image-41-ELEV_ZONES.jpg)
+[![Zones](images/image-41-ELEV_ZONES.jpg?classes=img-maxsize)](images/image-41-ELEV_ZONES.jpg)
 
 You will find **4 zones**:
 
@@ -160,7 +160,8 @@ You will find **4 zones**:
 
 Double-click any zone to edit its size / position as needed:
 
-![Zone Editor](images/image-41-ELEV_ZONEDITOR.jpg)
+
+[![Zone Editor](images/image-41-ELEV_ZONEDITOR.jpg?classes=img-maxsize)](images/image-41-ELEV_ZONEDITOR.jpg)
 
 You can toggle between the first/last frame to align zones properly. Adjust now all zones like it is explained above.
 
@@ -182,7 +183,7 @@ Press **OK** when zones are correct.
 
 Load your level → select the elevator → click **Add** and it will appear on the map.
 
-![Elevator on Map](images/image-41-ELEV_ONMAP.jpg)
+[![Elevator on Map](images/image-41-ELEV_ONMAP.jpg?classes=img-maxsize)](images/image-41-ELEV_ONMAP.jpg)
 
 Export your map and test the elevator.
 
