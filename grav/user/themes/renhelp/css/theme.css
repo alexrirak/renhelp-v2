@@ -10,7 +10,7 @@ body {
 }
 
 .ren-container {
-    max-width: 1100px; /* or whatever width matches screenshot */
+    max-width: 1100px;
     margin: 0 auto;
     padding: 16px;
     background: white;
@@ -231,7 +231,7 @@ footer {
 
 
 .img-maxsize {
-    max-width: calc(100vw - 16px);
+    max-width: calc(100% - 16px);
 }
 
 .page-content pre {
