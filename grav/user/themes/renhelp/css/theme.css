@@ -187,6 +187,7 @@ body {
     display: flex;
     gap: 15px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .tutorial-meta th {
@@ -231,5 +232,9 @@ footer {
 
 .img-maxsize {
     max-width: calc(100vw - 16px);
+}
+
+.page-content pre {
+    overflow-x: auto;
 }
 
