@@ -228,3 +228,8 @@ footer {
     padding: 5px;
 }
 
+
+.img-maxsize {
+    max-width: calc(100vw - 16px);
+}
+
