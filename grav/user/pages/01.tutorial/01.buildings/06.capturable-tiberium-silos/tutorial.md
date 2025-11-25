@@ -1,7 +1,6 @@
 ---
 title: Capturable Tiberium Silos
 summary: Guide to creating capturable Tiberium Silos
-type: [RenX, LevelEdit]
 author: zunnie
 skill: 2
 forum_url: https://multiplayerforums.com/topic/707-capturable-tiberium-silos/
@@ -18,7 +17,6 @@ This tutorial walks you through how to create capturable Tiberium Silos in your 
 ## 1. Create the Base Preset
 
 TEMP a preset into: `Object → Vehicle → Mounted`
-
 
 Name it something like **`Capturable_GDI_Silo`**.
 
