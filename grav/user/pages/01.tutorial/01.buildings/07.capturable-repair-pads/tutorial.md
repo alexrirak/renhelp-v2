@@ -8,7 +8,7 @@ forum_url: https://multiplayerforums.com/topic/711-capturable-repair-pads/
 
 ## Required Files
 
-The Repair Pad models and textures are included in: [CapturableRepairpads.zip](files/CapturableRepairpads.zip) (or at [MPF](https://multiplayerforums.com/applications/core/interface/file/attachment.php?id=4527))
+The Repair Pad models and textures are included in: [CapturableRepairpads.zip](files/CapturableRepairpads.zip) (or at <a href="https://multiplayerforums.com/applications/core/interface/file/attachment.php?id=4527">MPF</a>)
 
 ---
 
@@ -18,7 +18,7 @@ TEMP a preset under: `Object → Simple → Simple_DSAPO_Versions → Simple_Min
 
 Name it **`Capturable_GDI_Repairpad`**.
 
-![Image1](images/Image1.jpg)
+[![Image1.jpg](images/Image1.jpg?classes=img-maxsize)](images/Image1.jpg)
 
 ---
 
@@ -30,7 +30,7 @@ Open the **Physics** tab:
 - Browse to the provided Repair Pad model
 - Click **Open**
 
-![Image2](images/Image2.jpg)
+[![Image2](images/Image2.jpg?classes=img-maxsize)](images/Image2.jpg)
 
 ---
 
@@ -51,14 +51,14 @@ Set the **TranslatedNameID**:
 - Select the entry for **Repair Facility**
 - Set **Encyclopedia Type** → `Building`
 
-![Image3](images/Image3.jpg)
+[![Image3.jpg](images/Image3.jpg?classes=img-maxsize)](images/Image3.jpg)
 
 Still on the **Settings** tab:
 
 - **PlayerType:** `Unteamed`
 - **Radar Blip Type:** `Stationary`
 
-![Image4](images/Image4.jpg)
+[![Image4.jpg](images/Image4.jpg?classes=img-maxsize)](images/Image4.jpg)
 
 ---
 
@@ -66,7 +66,7 @@ Still on the **Settings** tab:
 
 Click **MAKE** to create the object in your level.
 
-![Image5](images/Image5.jpg)
+[![Image5.jpg](images/Image5.jpg?classes=img-maxsize)](images/Image5.jpg)
 
 ---
 
@@ -81,13 +81,13 @@ To adjust its height:
 - Hold **SHIFT**
 - Drag the black handles up/down to resize the zone
 
-![Image6](images/Image6.jpg)
+[![Image6.jpg](images/Image6.jpg?classes=img-maxsize)](images/Image6.jpg)
 
 Open the **properties** of the Repair Pad.  
 Record its **ID**—in this example: `100000`
 Then open the **zone properties**, and record its **ID**—here: `100001`
 
-![Image7](images/Image7.jpg)
+[![Image7](images/Image7.jpg?classes=img-maxsize)](images/Image7.jpg)
 
 ---
 
@@ -103,11 +103,11 @@ Set:
 - **Name:** `RepairZoneID `
 - **value:** (the ID of the zone you created, e.g., `100001`)
 
-![Image9](images/Image9.jpg)
+[![Image9](images/Image9.jpg?classes=img-maxsize)](images/Image9.jpg)
 
 End result should look like this for the repair pad:
 
-![Image11](images/Image11.jpg)
+[![Image11](images/Image11.jpg?classes=img-maxsize)](images/Image11.jpg)
 
 ---
 
@@ -121,11 +121,11 @@ Set:
 - **Name:** `RepairPadID`
 - **value:** (the ID of the Repair Pad you created, e.g., `100000`)
 
-- ![Image12](images/Image12.jpg)
+[![Image12](images/Image12.jpg?classes=img-maxsize)](images/Image12.jpg)
 
 End result for the zone should look similar to this:
 
-![Image13](images/Image13.jpg)
+[![Image13](images/Image13.jpg?classes=img-maxsize)](images/Image13.jpg)
 
 ---
 
@@ -134,7 +134,7 @@ End result for the zone should look similar to this:
 Save your level. You now have a fully **capturable Repair Pad** in-game.
 Repeat the same process for the **Nod** version using the Nod Repair Pad model.
 
-![Image14](images/Image14.jpg)
+[![Image14](images/Image14.jpg?classes=img-maxsize)](images/Image14.jpg)
 
 
 
