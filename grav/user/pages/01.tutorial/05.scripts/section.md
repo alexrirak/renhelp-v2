@@ -1,5 +1,5 @@
 ---
-title: Server Side
+title: Scripts
 content:
   items: '@self.children'
   order:
@@ -7,4 +7,4 @@ content:
     dir: asc
 ---
 
-Tutorials dealing with Server Side changes.
+Tutorials dealing with Script changes.
