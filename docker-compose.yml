@@ -14,6 +14,7 @@ services:
       bash -c "chown -R www-data:www-data /var/www/html &&
                      chmod -R 777 /var/www/html &&
                      chmod -R 777 /var/www/html/cache /var/www/html/logs /var/www/html/tmp /var/www/html/images /var/www/html/assets &&
+                     composer install &&
                      apache2-foreground"
 networks:
   internal:
