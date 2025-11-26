@@ -1,5 +1,6 @@
 ---
 title: Characters
+icon: 'characters.svg'
 content:
   items: '@self.children'
   order:

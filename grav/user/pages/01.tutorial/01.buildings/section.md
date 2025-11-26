@@ -1,6 +1,6 @@
 ---
 title: Buildings
-icon: 'images/building.gif'
+icon: 'buildings.svg'
 content:
   items: '@self.children'
   order:

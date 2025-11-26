@@ -1,5 +1,6 @@
 ---
 title: Skinning
+icon: 'skins.svg'
 content:
   items: '@self.children'
   order:

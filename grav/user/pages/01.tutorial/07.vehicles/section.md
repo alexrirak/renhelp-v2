@@ -1,5 +1,6 @@
 ---
 title: Vehicles
+icon: 'vehicles.svg'
 content:
   items: '@self.children'
   order:

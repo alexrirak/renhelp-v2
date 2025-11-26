@@ -1,5 +1,6 @@
 ---
 title: Weapons
+icon: 'weapons.svg'
 content:
   items: '@self.children'
   order:

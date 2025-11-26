@@ -1,5 +1,6 @@
 ---
 title: Other
+icon: 'other.svg'
 content:
   items: '@self.children'
   order:

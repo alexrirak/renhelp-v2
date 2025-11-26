@@ -1,5 +1,6 @@
 ---
 title: Dedicated Server
+icon: 'server.svg'
 content:
   items: '@self.children'
   order:

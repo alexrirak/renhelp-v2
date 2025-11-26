@@ -1,5 +1,6 @@
 ---
 title: Maps
+icon: 'maps.svg'
 content:
   items: '@self.children'
   order:

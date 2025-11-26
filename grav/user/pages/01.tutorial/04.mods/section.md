@@ -1,5 +1,6 @@
 ---
 title: Mods
+icon: 'mods.svg'
 content:
   items: '@self.children'
   order:

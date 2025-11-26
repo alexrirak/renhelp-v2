@@ -1,5 +1,6 @@
 ---
 title: Scripts
+icon: 'scripts.svg'
 content:
   items: '@self.children'
   order:
