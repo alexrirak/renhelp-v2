@@ -37,7 +37,7 @@ Inside your new tutorial folder, create a file named:
 You can use an existing tutorial’s `tutorial.md` as a starting point:
 
 1. Copy the contents from a similar tutorial’s `tutorial.md`.
-2. Update the frontmatter (the YAML block at the top) such as `title`, `menu`, and any other applicable fields (the more fields you can specify the better but keep it short).
+2. Update the frontmatter (the YAML block at the top) such as `title`, `author`, and any other applicable fields (the more fields you can specify the better but keep it short).
 3. Replace the body text with your new tutorial content (you can use any [markdown formatting](https://www.markdownguide.org/basic-syntax/) and basic HTML).
 
 > Grav uses this `tutorial.md` file to render the page.
