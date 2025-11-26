@@ -32,6 +32,4 @@ It uses:
 For vehicles, it uses `VehicleRepairRate`, and will repair **any vehicle whose Encyclopedia Type is set to “Building” in LevelEdit**.  
 This was chosen because it provides a simple way to mark which objects the Construction Yard should repair.
 
-**Note:**
-- The Construction Yard will _not_ repair itself.
-
+> **Note:** The Construction Yard will _not_ repair itself.

@@ -57,7 +57,7 @@ Sounds must be 2D sound presets created in LevelEdit
 
 These play whenever an item is purchased.
 
-**Note:** The sidebar only shows the icon and cost — no overlay text. So you will need to either rely just on the pictures or you will need to add text to your icons.
+> **Note:** The sidebar only shows the icon and cost — no overlay text. So you will need to either rely just on the pictures or you will need to add text to your icons.
 
 **All players and the server must have scripts 4.1 installed** for this to work.
 
