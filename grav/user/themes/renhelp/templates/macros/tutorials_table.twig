@@ -13,7 +13,12 @@
         {% for r in rows %}
             <tr>
                 <td>
-                    <a href="{{ r.url }}">{{ r.title }}</a>
+                    <div style="display: flex;gap: 5px;">
+                        {% if r.header.video %}
+                        <img src="{{ url("theme://images/video.svg") }}" alt="video" />
+                        {% endif %}
+                        <a href="{{ r.url }}">{{ r.title }}</a>
+                    </div>
                     {% if r.header.summary %}
                         <div style="font-size:12px; color:#586978;">{{ r.header.summary }}</div>
                     {% endif %}
