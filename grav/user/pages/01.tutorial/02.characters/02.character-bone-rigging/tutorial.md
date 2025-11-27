@@ -4,6 +4,7 @@ summary: Ever wondered how to make your own characters? Here you will find help.
 type: [ RenX ]
 author: Läubi
 skill: 3
+forum_url: https://multiplayerforums.com/topic/158-character-bone-rigging-author-laubi/
 ---
 
 1. **First we need our Character, here you can see the Umagon from Reborn**
