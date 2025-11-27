@@ -1,6 +1,5 @@
 ---
 title: Character Bone Rigging
-summary: Ever wondered how to make your own characters? Here you will find help.
 type: [ RenX ]
 author: Läubi
 skill: 3
