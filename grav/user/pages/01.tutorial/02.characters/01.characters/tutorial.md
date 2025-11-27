@@ -4,6 +4,7 @@ summary: Ever wondered how to make your own characters? Here you will find help.
 type: [ RenX ]
 author: Greg Hjelstrom (Westwood Studios)
 skill: 2
+forum_url: https://multiplayerforums.com/topic/157-characters-author-greg-hjelstrom/
 ---
 
 ### Creating a New Character Model
