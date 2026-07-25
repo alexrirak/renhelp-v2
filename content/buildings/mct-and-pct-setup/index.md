@@ -13,8 +13,8 @@ forum_url: https://multiplayerforums.com/topic/155-mct-and-pct-setup-author-bump
 This guide explains how to properly configure **Master Control Terminals (MCTs)** and **Purchase Terminals (PCTs)** for use in RenX and LevelEdit.
 
 You can download the assets here:
-- **MCTs:** [mct.zip](files/mct.zip) (or at <a href="http://renhelp.multiplayerforums.com/downloads/mct.zip">MPF</a>)
-- **PCTs:** [pct.zip](files/pct.zip) (or at <a href="http://renhelp.multiplayerforums.com/downloads/pct.zip">MPF</a>)
+- **MCTs:** [mct.zip](files/mct.zip) (or at [MPF](http://renhelp.multiplayerforums.com/downloads/mct.zip))
+- **PCTs:** [pct.zip](files/pct.zip) (or at [MPF](http://renhelp.multiplayerforums.com/downloads/pct.zip))
 
 These terminals were developed by **Bumpaneer**, with help from **Abjab** (for MCTs), **AircraftKiller** (for PCTs) and **StoneRook**. You may use them in any project as long as you credit Bumpaneer.
 

@@ -8,7 +8,7 @@ forum_url: https://multiplayerforums.com/topic/711-capturable-repair-pads/
 
 ## Required Files
 
-The Repair Pad models and textures are included in: [CapturableRepairpads.zip](files/CapturableRepairpads.zip) (or at <a href="https://multiplayerforums.com/applications/core/interface/file/attachment.php?id=4527">MPF</a>)
+The Repair Pad models and textures are included in: [CapturableRepairpads.zip](files/CapturableRepairpads.zip) (or at [MPF](https://multiplayerforums.com/applications/core/interface/file/attachment.php?id=4527))
 
 ---
 

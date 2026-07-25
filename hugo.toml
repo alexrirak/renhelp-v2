@@ -2,12 +2,11 @@ baseURL = 'https://renhelp.net/'
 locale = 'en-us'
 title = 'RenHelp.net'
 
+# No feed is linked anywhere in the theme, so don't generate one.
+disableKinds = ['RSS']
+
 [params]
   description = 'Renhelp is a tutorial repository for Command and Conquer Renegade'
-  author = 'Alex Rirak'
-
-[markup.goldmark.renderer]
-  unsafe = true
 
 # This site doesn't use tags/categories; disable Hugo's default taxonomies
 # so it doesn't generate empty /tags/ and /categories/ pages.
