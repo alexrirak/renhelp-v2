@@ -124,7 +124,7 @@ that you set.
 
     [![image-50-HEADSHOT.jpg](images/image-50-HEADSHOT.jpg)](images/image-50-HEADSHOT.jpg)
 
-###Finally
+### Finally
 
 It is recommended, but not essential that you collapse your object back to an Editable Mesh. It is recommended because 
 most game engines require the UVW Mapping to be built in to the object. Not many game engines will understand the 
