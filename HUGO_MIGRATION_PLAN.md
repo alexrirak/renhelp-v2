@@ -12,6 +12,8 @@ We're moving to [Hugo](https://gohugo.io/) to drop the PHP/Docker runtime entire
 
 **Front matter fields in use**: `title`, `summary`, `type` (array of tags), `author`, `skill` (1–5), `forum_url`, `video` (bool); sections additionally have `icon` (svg filename).
 
+> Note: while building the Hugo templates, `type` turned out to be a Hugo-reserved front matter key (it drives `.Type`/template lookup and gets stripped out of `.Params`). The migration script renames this field to `tools` when writing Hugo content — everything else maps 1:1.
+
 **Theme** (`grav/user/themes/renhelp/`): custom Twig, no third-party dependency.
 - `base.html.twig` — HTML shell: header, nav, breadcrumbs, footer, CSS include
 - `default.html.twig` — homepage, loops over category sections and renders a tutorials table for each

@@ -1,0 +1,280 @@
+/* renhelp theme base */
+/* Basic reset */
+* { box-sizing: border-box; }
+body {
+    background-color: #cfe3ff; /* light blue background from screenshot */
+    color: #1b2430; /* a dark but soft text color */
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+.ren-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px;
+    background: white;
+    border: 1px solid #95bfe5; /* subtle border to set container apart */
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* header */
+.ren-header {
+    background-color: #8fb7e9; /* darker header blue */
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #7aa6da;
+}
+
+.ren-logo img {
+    height: 48px;
+    margin-right: 12px;
+}
+
+/* navigation */
+.ren-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.ren-nav li {
+    margin-right: 16px;
+}
+
+.ren-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.ren-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* section header */
+.ren-section-title {
+    background-color: #c7def8;
+    padding: 8px 10px;
+    border: 1px solid #7aa6da;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.ren-section-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ren-section-title h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #1b2430;
+}
+
+.section-icon {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+}
+
+/* tutorial table */
+.tutorials-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background-color: #ffffff;
+    border: 1px solid #8fb7e9;
+}
+
+.tutorials-table th, .tutorials-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #7aa6da;
+    text-align: left;
+    font-size: 13px;
+}
+
+.tutorials-table thead th {
+    background-color: #8fb7e9;
+    color: #ffffff;
+    border-bottom: 2px solid #7aa6da;
+}
+
+.tutorials-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.tutorials-table td[data-label]::before { /* for responsive: prepend label */
+    content: attr(data-label) ": ";
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+    color: #555;
+}
+
+/* skill icons */
+.skill-stars {
+    white-space: nowrap;
+}
+
+.skill-stars .star {
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.skill-stars .filled {
+    color: #2d529f;
+}
+
+.skill-stars .empty {
+    color: #aac1e0;
+}
+
+.tag-type {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: #d3e8ff;
+    border: 1px solid #7aa6da;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 4px;
+    color: #163d71;
+}
+
+
+/* small icons */
+.icon-inline { vertical-align: middle; height:18px; margin-right:6px; }
+
+/* responsive */
+@media (max-width:900px) {
+    .ren-container { padding:8px; }
+    .ren-logo img { height:44px; }
+    .tutorials-table thead { display:none; }
+    .tutorials-table tbody td { display:block; width:100%; }
+    .tutorials-table tbody td:before {
+        content: attr(data-label);
+        display:block;
+        font-weight:600;
+        margin-bottom:4px;
+    }
+}
+
+/* tutorial metadata */
+/* Subtle metadata box */
+.tutorial-meta {
+    padding: 6px 10px;       /* tighter */
+    margin: 12px 0 20px;
+    background: #f7f7f7;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    font-size: 0.92rem;
+}
+
+/* Metadata table refinement */
+.tutorial-meta table {
+    width: auto;                       /* no stretching */
+    border-collapse: collapse;
+}
+
+.tutorial-meta tbody {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tutorial-meta th {
+    text-align: left;
+    padding: 3px 8px 3px 0;
+    font-weight: bold;
+    color: #444;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.tutorial-meta td {
+    padding: 3px 0;
+    color: #222;
+    font-size: 0.9rem;
+}
+
+/* star icons */
+.skill-stars .star {
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+.skill-stars .star.filled {
+    color: #d5a500;
+}
+
+.tool-tag {
+    padding: 2px 6px;
+    font-size: 0.78rem;
+    background: #e9e9e9;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+}
+
+/* footer */
+footer {
+    border: 1px black dashed;
+    padding: 5px;
+}
+
+/* responsive images */
+.page-content img {
+    max-width: calc(100% - 16px);
+}
+
+/* code blocks */
+pre {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 1rem 1.25rem;
+    border: 1px solid #4aa3ff;
+    border-radius: 6px;
+    overflow-x: auto;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    margin: 1.25rem 0;
+}
+
+pre code {
+    font-family: "Fira Code", "Source Code Pro", Consolas, monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+code {
+    font-family: "Fira Code", "Source Code Pro", Consolas, monospace;
+    font-size: 0.85rem;
+}
+
+
+
+/* blockquotes */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #4aa3ff;
+    background: rgba(255, 255, 255, 0.04);
+    font-style: italic;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote strong {
+    color: #4aa3ff;
+}
+
+

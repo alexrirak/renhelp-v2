@@ -1,0 +1,60 @@
+{{ define "content" }}
+    {{ $h := .Params }}
+
+    {{ if or $h.author $h.skill $h.tools $h.forum_url }}
+        <div class="tutorial-meta">
+            <table>
+                {{ with $h.author }}
+                    <tr>
+                        <th>Author:</th>
+                        <td>{{ . }}</td>
+                    </tr>
+                {{ end }}
+
+                {{ with $h.skill }}
+                    <tr>
+                        <th>Skill Level:</th>
+                        <td>
+                            <div class="skill-stars">
+                                {{ $skill := . }}
+                                {{ range seq 1 5 }}
+                                    {{ if le . $skill }}
+                                        <span class="star filled">&#9733;</span>
+                                    {{ else }}
+                                        <span class="star">&#9733;</span>
+                                    {{ end }}
+                                {{ end }}
+                            </div>
+                        </td>
+                    </tr>
+                {{ end }}
+
+                {{ with $h.tools }}
+                    <tr>
+                        <th>Tools:</th>
+                        <td>
+                            {{ range . }}
+                                <span class="tool-tag">{{ . }}</span>
+                            {{ end }}
+                        </td>
+                    </tr>
+                {{ end }}
+
+                {{ with $h.forum_url }}
+                    <tr>
+                        <th>Discussion:</th>
+                        <td><a href="{{ . }}">MPF Forums</a></td>
+                    </tr>
+                {{ end }}
+            </table>
+        </div>
+    {{ end }}
+
+    <article class="page">
+        <h1>{{ .Title }}</h1>
+
+        <div class="page-content">
+            {{ .Content }}
+        </div>
+    </article>
+{{ end }}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    <link rel="stylesheet" href="{{ "css/theme.css" | relURL }}">
+</head>
+<body>
+<div class="ren-container">
+    {{ partial "header.html" . }}
+    {{ partial "breadcrumbs.html" . }}
+
+    <main id="content">
+        {{ block "content" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+</div>
+</body>
+</html>

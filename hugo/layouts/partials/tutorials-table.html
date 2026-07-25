@@ -1,0 +1,50 @@
+<table class="tutorials-table" role="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th style="width:120px">Skill</th>
+        <th style="width:160px">Author</th>
+        <th style="width:140px">Tools</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range . }}
+        <tr>
+            <td>
+                <div style="display: flex;gap: 5px;">
+                    {{ if .Params.video }}
+                        <img src="{{ "images/video.svg" | relURL }}" alt="video">
+                    {{ end }}
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </div>
+                {{ with .Params.summary }}
+                    <div style="font-size:12px; color:#586978;">{{ . }}</div>
+                {{ end }}
+            </td>
+
+            <td>
+                <div class="skill-stars">
+                    {{ $skill := .Params.skill | default 0 }}
+                    {{ range seq 1 5 }}
+                        {{ if le . $skill }}
+                            <span class="star filled">&#9733;</span>
+                        {{ else }}
+                            <span class="star empty">&#9734;</span>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </td>
+
+            <td>{{ .Params.author | default "&mdash;" | safeHTML }}</td>
+
+            <td>
+                {{ range .Params.tools }}
+                    <span class="tag-type">{{ . }}</span>
+                {{ end }}
+            </td>
+        </tr>
+    {{ else }}
+        <tr><td colspan="4">No tutorials found.</td></tr>
+    {{ end }}
+    </tbody>
+</table>
