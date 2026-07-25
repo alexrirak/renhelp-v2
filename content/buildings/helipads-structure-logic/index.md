@@ -13,7 +13,7 @@ forum_url: https://multiplayerforums.com/topic/2979-41-helipad-structure-logic/
 
 Firstly, in order to use this functionality you need to be using the sidebar in your map.
 
-Follow this tutorial: [Renegade Sidebar Tutorial](/tutorial/other/renegade-sidebar-tutorial)
+Follow this tutorial: [Renegade Sidebar Tutorial](/other/renegade-sidebar-tutorial/)
 
 Make sure to read part 2 and follow that.
 

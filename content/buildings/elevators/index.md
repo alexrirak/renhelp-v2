@@ -173,8 +173,8 @@ Here are mine
 
 | Zone          | Image                                | Zone            | Image                              |
 |---------------|--------------------------------------|-----------------|------------------------------------|
-| LowerCallZone | ![](images/image-41-E_LOWERCALL.jpg) | LowerInsideZone | ![](images/image-41-E_LOWERIN.jpg) |
-| UpperCallZone | ![](images/image-41-E_UPPERCALL.jpg) | UpperInsideZone | ![](images/image-41-E_UPPERIN.jpg) |
+| LowerCallZone | ![LowerCallZone example](images/image-41-E_LOWERCALL.jpg) | LowerInsideZone | ![LowerInsideZone example](images/image-41-E_LOWERIN.jpg) |
+| UpperCallZone | ![UpperCallZone example](images/image-41-E_UPPERCALL.jpg) | UpperInsideZone | ![UpperInsideZone example](images/image-41-E_UPPERIN.jpg) |
 
 
 Press **OK** when zones are correct.

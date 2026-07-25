@@ -149,9 +149,6 @@ body {
 }
 
 
-/* small icons */
-.icon-inline { vertical-align: middle; height:18px; margin-right:6px; }
-
 /* responsive */
 @media (max-width:900px) {
     .ren-container { padding:8px; }
