@@ -1,0 +1,10 @@
+baseURL = 'https://renhelp.net/'
+locale = 'en-us'
+title = 'RenHelp.net'
+
+[params]
+  description = 'Renhelp is a tutorial repository for Command and Conquer Renegade'
+  author = 'Alex Rirak'
+
+[markup.goldmark.renderer]
+  unsafe = true

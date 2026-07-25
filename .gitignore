@@ -1,6 +1,11 @@
-grav/vendor
+legacy/grav/vendor
 .env
 .env.prod
 /.idea
-grav/cache
-grav/logs
+legacy/grav/cache
+legacy/grav/logs
+
+# Hugo
+hugo/public/
+hugo/resources/
+hugo/.hugo_build.lock
