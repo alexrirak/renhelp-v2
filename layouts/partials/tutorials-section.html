@@ -1,0 +1,17 @@
+<div class="ren-section">
+    <a href="{{ .RelPermalink }}" style="text-decoration: none;">
+        <div class="ren-section-title">
+            {{ with .Resources.GetMatch "*.svg" }}
+                <img class="section-icon" src="{{ .RelPermalink }}" alt="{{ $.Title }}">
+            {{ end }}
+            <div class="ren-section-subtitle">
+                <h2>{{ .Title }}</h2>
+                {{ with .Summary }}
+                    <div style="font-size:12px; color:#586978;">{{ . | plainify }}</div>
+                {{ end }}
+            </div>
+        </div>
+    </a>
+
+    {{ partial "tutorials-table.html" .RegularPages.ByTitle }}
+</div>
