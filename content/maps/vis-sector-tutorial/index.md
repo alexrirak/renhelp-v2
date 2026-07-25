@@ -58,7 +58,7 @@ Then clone it.
 
 [![Cloning the sector](images/Image5.jpg)](images/Image5.jpg)
 
-And repeat until you have the VIS sectors cover all of your terrain like so. It is extremely useful to use the Grid tool for this so it is easy to line them up, if you don't know how to use the Grid there is a tutorial I made [here](https://multiplayerforums.com/index.php?/topic/1249-level-edit-renx3ds-max-hints-tips/).
+And repeat until you have the VIS sectors cover all of your terrain like so. It is extremely useful to use the Grid tool for this so it is easy to line them up, if you don't know how to use the Grid there is a tutorial I made [here](/other/level-edit-renx-3ds-max-hints-tips/).
 
 [![Sectors repeated across the terrain](images/Image6.jpg)](images/Image6.jpg)
 [![Full sector coverage over the map](images/Image7.jpg)](images/Image7.jpg)
