@@ -116,7 +116,7 @@ You only need Hugo running locally if you're changing **styling**, **layout**, o
 
 ### 1. Install Hugo
 
-Install the **extended** version of [Hugo](https://gohugo.io/installation/) (needed for the CSS/asset pipeline). Verify with:
+Install [Hugo](https://gohugo.io/installation/). The standard build is enough — this site uses a plain CSS file, so the extended version isn't required. Verify with:
 
 ```sh
 hugo version
