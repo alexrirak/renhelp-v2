@@ -8,3 +8,7 @@ title = 'RenHelp.net'
 
 [markup.goldmark.renderer]
   unsafe = true
+
+# This site doesn't use tags/categories; disable Hugo's default taxonomies
+# so it doesn't generate empty /tags/ and /categories/ pages.
+[taxonomies]
