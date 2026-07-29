@@ -14,7 +14,7 @@ You can add a new tutorial entirely by editing markdown files; no local server i
 
 ### 1. Find the category folder
 
-Open the `content/` folder and pick the category your tutorial belongs in, e.g. `content/buildings/`, `content/characters/`, etc. Each category is a folder containing an `_index.md`.
+Content is organized as `content/<game>/<category>/`. Open the game folder (e.g. `content/renegade/`) and pick the category your tutorial belongs in, e.g. `content/renegade/buildings/`, `content/renegade/characters/`, etc. Each category is a folder containing an `_index.md`.
 
 > If you're unsure which folder to use, look for existing tutorials you recognize and mirror that layout.
 
@@ -23,7 +23,7 @@ Open the `content/` folder and pick the category your tutorial belongs in, e.g. 
 Inside the category folder, create a new subfolder for your tutorial, e.g.:
 
 ```text
-content/buildings/my-new-tutorial/
+content/renegade/buildings/my-new-tutorial/
 ```
 
 Tutorials within a category are always listed alphabetically by title, regardless of folder name.
@@ -61,7 +61,7 @@ Replace the body text with your tutorial content — standard [Markdown](https:/
 If your tutorial needs images or downloadable files, add them as subfolders next to `index.md`:
 
 ```text
-content/buildings/my-new-tutorial/
+content/renegade/buildings/my-new-tutorial/
 ├─ index.md
 ├─ images/
 └─ files/
@@ -93,7 +93,7 @@ Once merged, Cloudflare Pages will automatically rebuild and deploy the site.
 
 ## How to add a new category
 
-1. Create a new folder under `content/`, e.g. `content/robots/`.
+1. Create a new folder under the game's folder, e.g. `content/renegade/robots/`.
 2. Inside it, create `_index.md`:
 
    ```yaml
@@ -105,8 +105,29 @@ Once merged, Cloudflare Pages will automatically rebuild and deploy the site.
    A short description of this category.
    ```
 
-   `weight` controls where the category appears in the homepage list (lower numbers first).
+   `weight` controls where the category appears in the game page's list (lower numbers first).
 3. Add an `.svg` icon file in the same folder — it's picked up automatically and shown next to the category title.
+
+---
+
+## How to add a new game
+
+1. Create a new folder directly under `content/`, e.g. `content/game2/`.
+2. Inside it, create `_index.md`:
+
+   ```yaml
+   ---
+   title: Game 2
+   weight: 2
+   type: game
+   ---
+
+   A short description shown on the game's own page.
+   ```
+
+   `type: game` is required — it's what tells Hugo to render this as a game page (categories + their tutorials) instead of a plain content page. `weight` controls where the game appears in the homepage list.
+3. Add an icon image (`.svg` or `.png`) in the same folder — it's picked up automatically and shown on the homepage.
+4. Add category folders underneath it as described above.
 
 ---
 
