@@ -1,0 +1,13 @@
+{{ $image := .Resources.GetMatch "*.{svg,png,jpg,jpeg}" }}
+<a class="game-banner{{ if $image }} game-banner--image{{ end }}" href="{{ .RelPermalink }}">
+    {{ if $image }}
+        <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}">
+    {{ else }}
+        <div class="game-banner-fallback">
+            <h2>{{ .Title }}</h2>
+            {{ with .Summary }}
+                <div class="game-banner-summary">{{ . | plainify }}</div>
+            {{ end }}
+        </div>
+    {{ end }}
+</a>

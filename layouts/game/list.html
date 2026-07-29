@@ -6,10 +6,8 @@
             {{ .Content }}
         </div>
 
-        <div class="game-list">
-            {{ range .Sections.ByWeight }}
-                {{ partial "game-card.html" . }}
-            {{ end }}
-        </div>
+        {{ range .Sections.ByWeight }}
+            {{ partial "tutorials-section.html" . }}
+        {{ end }}
     </article>
 {{ end }}

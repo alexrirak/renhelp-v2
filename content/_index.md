@@ -2,4 +2,4 @@
 title: Tutorials
 ---
 
-Welcome to RenHelp.Net! Please see the sections below for tutorials on various topics related to Command & Conquer Renegade.
+Welcome to RenHelp.Net! Select a game below to browse its tutorials.
