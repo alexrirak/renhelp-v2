@@ -154,6 +154,13 @@ body {
     position: relative;
     z-index: 1;
     pointer-events: none;
+    display: flex;
+}
+
+.theme-toggle-icon svg {
+    width: 14px;
+    height: 14px;
+    display: block;
 }
 
 .theme-toggle-knob {
