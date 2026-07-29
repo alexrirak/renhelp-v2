@@ -1,6 +1,13 @@
 <header class="ren-header">
-    <div class="ren-logo">
-        <img src="{{ "images/logo.png" | relURL }}" alt="Logo">
+    <div class="ren-header-top">
+        <div class="ren-logo">
+            <img src="{{ "images/logo.png" | relURL }}" alt="Logo">
+        </div>
+        <button type="button" class="theme-toggle" id="theme-toggle" role="switch" aria-checked="false" aria-label="Dark mode">
+            <span class="theme-toggle-icon icon-light" aria-hidden="true">&#9728;</span>
+            <span class="theme-toggle-icon icon-dark" aria-hidden="true">&#9789;</span>
+            <span class="theme-toggle-knob"></span>
+        </button>
     </div>
     {{ partial "navigation.html" . }}
 </header>

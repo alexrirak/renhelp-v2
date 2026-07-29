@@ -13,12 +13,12 @@
             <td>
                 <div style="display: flex;gap: 5px;">
                     {{ if .Params.video }}
-                        <img src="{{ "images/video.svg" | relURL }}" alt="video">
+                        <img class="video-icon" src="{{ "images/video.svg" | relURL }}" alt="video">
                     {{ end }}
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </div>
                 {{ with .Params.summary }}
-                    <div style="font-size:12px; color:#586978;">{{ . }}</div>
+                    <div style="font-size:12px; color:var(--text-secondary);">{{ . }}</div>
                 {{ end }}
             </td>
 
