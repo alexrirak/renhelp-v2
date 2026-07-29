@@ -1,5 +1,5 @@
 {{ if not .IsHome }}
-    <div style="margin-top:8px; font-size:12px; color:#345;">
+    <div style="margin-top:8px; font-size:12px; color:var(--text-secondary);">
         {{ range .Ancestors.Reverse }}
             <a href="{{ .RelPermalink }}">{{ .Title }}</a> &raquo;
         {{ end }}

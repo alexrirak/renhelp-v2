@@ -3,6 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem("renhelp-theme");
+                var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                document.documentElement.setAttribute("data-theme", theme);
+            } catch (e) {}
+        })();
+    </script>
     <title>{{ .Title }} - {{ .Site.Title }}</title>
     {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     <link rel="canonical" href="{{ .Permalink }}">
@@ -22,6 +31,7 @@
     <meta name="twitter:image" content="{{ "images/social-card.png" | absURL }}">
 
     <link rel="stylesheet" href="{{ "css/theme.css" | relURL }}">
+    <script src="{{ "js/theme.js" | relURL }}" defer></script>
 </head>
 <body>
 <div class="ren-container">
