@@ -121,11 +121,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
+}
+
+.ren-logo {
+    min-width: 0;
+    flex-shrink: 1;
 }
 
 .ren-logo img {
-    height: 48px;
-    margin-right: 12px;
+    display: block;
+    max-height: 48px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
 }
 
 /* theme toggle */
@@ -137,6 +146,7 @@ body {
     width: 52px;
     height: 28px;
     padding: 0 6px;
+    flex-shrink: 0;
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid var(--border-header);
     border-radius: 999px;
@@ -354,7 +364,7 @@ body {
 /* responsive */
 @media (max-width:900px) {
     .ren-container { padding:8px; }
-    .ren-logo img { height:44px; }
+    .ren-logo img { max-height:36px; }
     .tutorials-table thead { display:none; }
     .tutorials-table tbody td { display:block; width:100%; }
     .tutorials-table tbody td:before {
