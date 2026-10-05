@@ -11,3 +11,22 @@ disableKinds = ['RSS']
 # This site doesn't use tags/categories; disable Hugo's default taxonomies
 # so it doesn't generate empty /tags/ and /categories/ pages.
 [taxonomies]
+
+# Top nav bar links. Weight controls left-to-right order.
+[menus]
+  [[menus.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+  [[menus.main]]
+    name = "Downloads"
+    url = "https://multiplayerforums.com/files/"
+    weight = 20
+  [[menus.main]]
+    name = "Community"
+    url = "https://multiplayerforums.com/"
+    weight = 30
+  [[menus.main]]
+    name = "Contribute"
+    url = "https://github.com/mpforums/renhelp-v2"
+    weight = 40
